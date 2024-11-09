@@ -1,21 +1,6 @@
-export let productCart = JSON.parse(localStorage.getItem('productCart'));
+export let productCart = JSON.parse(localStorage.getItem('productCart')) || [];
 
-if(!productCart){
-  productCart = [{
-    productId: 'j_product_0007',
-    quantity: 2,
-    size: '44'
-  },{
-    productId: 'a_product_0005',
-    quantity: 1,
-    size: '43'
-  }, {
-    productId: 'j_product_0001',
-    quantity: 3,
-    size: '42'
-  }];
-}
-
+// Remove the default items from the array initialization above
 export function saveToStorage () {
   localStorage.setItem('productCart', JSON.stringify(productCart));
 }
@@ -30,6 +15,5 @@ export function removeFromCart (productId, productSize) {
   });
 
   productCart = newCart;
-
   saveToStorage();
 }
