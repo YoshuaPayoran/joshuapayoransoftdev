@@ -96,6 +96,7 @@ updateShippingPrice();
 document.querySelectorAll('.s-method-input-radio').forEach((radio) => {
   radio.addEventListener('change', (event) => {
     if (event.target.checked) {
+      renderPaymentSummary();
       selectedShippingOption = event.target.id; 
       const shippingOption = updatePaymentShippingOption(selectedShippingOption);
       const priceString = shippingOption.priceCents
