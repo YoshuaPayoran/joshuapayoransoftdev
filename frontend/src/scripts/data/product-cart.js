@@ -1,6 +1,5 @@
 export let productCart = JSON.parse(localStorage.getItem('productCart')) || [];
 
-// Remove the default items from the array initialization above
 export function saveToStorage () {
   localStorage.setItem('productCart', JSON.stringify(productCart));
 }
