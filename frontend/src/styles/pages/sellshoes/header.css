@@ -132,14 +132,19 @@ header {
 }
 
 .cart-quantity {
-  font-size: 14px;
-  padding: 7px;
+  font-size: 15px;
+  min-width: 24px;
+  min-height: 24px;
   font-family: 'Poppins', sans-serif;
   position: absolute;
-  top: -25px;
+  top: -28px;
   right: -12px;
   line-height: 9px;
   background-color: blueviolet;
   border-radius: 50px;
   color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
