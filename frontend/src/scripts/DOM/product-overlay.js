@@ -223,9 +223,13 @@ export function updateCartQuantity() {
   productCart.forEach((cartItem) => {
     totalCartQuantity += cartItem.quantity;
   });
-
-  document.querySelector('.js-cart-total-quantity')
+  if(totalCartQuantity > 99) {
+    document.querySelector('.js-cart-total-quantity')
+    .innerHTML = '99+'
+  }else {
+    document.querySelector('.js-cart-total-quantity')
     .innerHTML = totalCartQuantity;
+  }
 }
 
 function addToCartButton(productId) {
