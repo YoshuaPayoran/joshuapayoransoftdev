@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+body img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.no-scroll{
+  overflow: hidden;
+}
+
+.hide-object {
+  opacity: 0;
+}
+
+.show-object {
+  opacity: 1;
+}
+
+.inactive {
+  display: none;
+}
+
+.active-block {
+  display: block;
+}
+
+.active-flex {
+  display: flex;
+}

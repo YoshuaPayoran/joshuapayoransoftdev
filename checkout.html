@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="frontend/src/styles/pages/checkout/header.css">
+  <link rel="stylesheet" href="frontend/src/styles/pages/checkout/shipping-form.css">
+  <link rel="stylesheet" href="frontend/src/styles/pages/checkout/order-summary.css">
+  <link rel="stylesheet" href="frontend/src/styles/shared/animations.css">
+  <link rel="stylesheet" href="frontend/src/styles/shared/general.css">
+  <title>Checkout.com</title>
+  <link rel="icon" type="image/x-icon" href="frontend/src/images/logos/logo.png">
+</head>
+<body>
+  <div class="top-header-container">
+    <div class="top-header">
+      FREE SHIPPING ABOVE PHP 25,000 ORDER
+    </div>
+    <div class="logo-ticker">
+      <ul>
+        <li>
+          Get more for less—shop now!
+        </li>
+        <li>
+          Flash sale items—don’t miss out!
+        </li>
+        <li>
+          Unlock discounts at checkout!
+        </li>
+        <li>
+          Final sale—best prices today!
+        </li>
+        <li>
+          Limited-time offers just for you!
+        </li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>
+          Get more for less—shop now!
+        </li>
+        <li>
+          Flash sale items—don’t miss out!
+        </li>
+        <li>
+          Unlock discounts at checkout!
+        </li>
+        <li>
+          Final sale—best prices today!
+        </li>
+        <li>
+          Limited-time offers just for you!
+        </li>
+      </ul>
+    </div>
+    <div class="cart-header-inner-container">
+      <div class="logo-container">
+        <a href="sellshoes.html">
+          <img src="frontend/src/images/logos/logo.png" alt="SellShoes Logo">
+          <div class="text-logo-container">
+            <p class="sell">Sell</p>
+            <p class="shoes">Shoes</p>
+          </div>
+        </a>
+      </div>
+      <div class="checkout-text">
+        CHECKOUT
+      </div>
+      <div class="lock-icon-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+          <rect width="24" height="24" fill="none" />
+          <g fill="none">
+            <path fill="grey" fill-rule="evenodd" d="M3 12a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3zm10 2a1 1 0 1 0-2 0v3a1 1 0 1 0 2 0z" clip-rule="evenodd" />
+            <path stroke="grey" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10V7a4 4 0 0 1 4-4v0a4 4 0 0 1 4 4v3" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="checkout-outer-container">
+    <div class="checkout-inner-container">
+      <div class="checkout-container">
+        <div class="left-side-container">
+          <div class="form-container">
+            <!--Step 1 Shipping address-->
+            <div class="s-form-container">
+              <div class="s-checkout-step" aria-current="step">
+                1
+              </div>
+              
+              <div class="s-checkout-form">
+                <div class="s-checkout-header">
+                  <h4>Shipping address</h4>
+                </div>
+
+                <div class="s-form-summary-info">
+                  <div class="s-form-summary">
+                    
+                  </div> 
+
+                  <button class="shipping-edit-button">
+                    EDIT
+                  </button>
+                </div>
+
+                <div class="s-form-body-content active-block">
+                  <div class="privacy-link">
+                    <p>
+                      Address looking powered by Google, view 
+                      <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.
+                    </p>
+                  </div>
+
+                  <div class="instruction-content">
+                    <p>
+                      <span style="color: blueviolet;">*</span> Indicates required field
+                    </p>
+                  </div>
+                  
+                  <div class="s-form-field">
+                    <div class="name-surname-div">
+                      <div class="s-form-firstname">
+                        <label for="s-form-firstname-default">FIRST NAME <span style="color: blueviolet;">*</span></label>
+                        <input type="text" class="s-form-firstname-textbox js-address-input" id="s-form-firstname-default" autofocus required>
+                        <div class="name-error">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                            <rect width="1024" height="1024" fill="none" />
+                            <path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                            <path fill="currentColor" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                            <path fill="currentColor" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                          </svg>
+                          <p>Please fill in this field</p>
+                        </div>
+                      </div>
+                      <div class="s-form-lastname">
+                        <label for="s-form-lastname-default">LAST NAME <span style="color: blueviolet;">*</span></label>
+                        <input type="text" class="s-form-lastname-textbox js-address-input" id="s-form-lastname-default" required>
+                        <div class="name-error">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                            <rect width="1024" height="1024" fill="none" />
+                            <path fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                            <path fill="red" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                            <path fill="red" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                          </svg>
+                          <p>Please fill in this field</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="address1-address2-div">
+                      <div class="s-form-address-1-street">
+                        <label for="s-form-address-1-default">ADDRESS 1 - STREET/ROOM #/HOUSE# <span style="color: blueviolet;">*</span></label>
+                        <input type="text" class="s-form-address-1-textbox js-address-input" id="s-form-address-1-default" required>
+                        <div class="name-error">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                            <rect width="1024" height="1024" fill="none" />
+                            <path fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                            <path fill="red" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                            <path fill="red" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                          </svg>
+                          <p>Please fill in this field</p>
+                        </div>
+                      </div>
+                      <div class="s-form-address-2-barangay">
+                        <label for="s-form-address-2-default">ADDRESS 2 - BARANGAY/AREA <span style="color: blueviolet;">*</span></label>
+                        <input type="text" class="s-form-address-2-textbox js-address-input" id="s-form-address-2-default" required>
+                        <div class="name-error">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                            <rect width="1024" height="1024" fill="none" />
+                            <path fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                            <path fill="red" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                            <path fill="red" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                          </svg>
+                          <p>Please fill in this field</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="city-province-div">
+                      <div class="s-form-address-city">
+                        <label for="s-form-address-city-default">CITY/MUNICIPALITY <span style="color: blueviolet;">*</span></label>
+                        <input type="text" class="s-form-address-city-textbox js-address-input" id="s-form-address-city-default" required>
+                        <div class="name-error">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                            <rect width="1024" height="1024" fill="none" />
+                            <path fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                            <path fill="red" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                            <path fill="red" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                          </svg>
+                          <p>Please fill in this field</p>
+                        </div>
+                      </div>
+                      <div class="s-form-zipcode-province">
+                        <div class="s-form-zipcode">
+                          <label for="s-form-zipcode-default">ZIP CODE <span style="color: blueviolet;">*</span></label>
+                          <input type="text" class="s-form-zipcode-textbox js-address-input" id="s-form-zipcode-default" required maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                          <div class="zipcode-error">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                              <rect width="1024" height="1024" fill="none" />
+                              <path fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                              <path fill="red" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                              <path fill="red" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                            </svg>
+                            <p>Please enter a 4-digit zipcode</p>
+                          </div>
+                        </div>
+
+                        <div class="s-form-province">
+                          <label for="s-form-province-default">
+                            PROVINCE
+                            <span style="color: blueviolet;">
+                              *
+                            </span>
+                        </label>
+                          <select id="s-form-province-default" class="js-address-select" required>
+                            <option value="default">Select Province</option>
+                            <option value="manila">Manila</option>
+                          </select>
+                          <div class="name-error selection-error">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 1024 1024">
+                              <rect width="1024" height="1024" fill="none" />
+                              <path fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372" />
+                              <path fill="red" fill-opacity="0.15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m-32 156c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8zm32 440a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96" />
+                              <path fill="red" d="M488 576h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8m-24 112a48 48 0 1 0 96 0a48 48 0 1 0-96 0" />
+                            </svg>
+                            <p>Please select your province</p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="shipping-button">
+                    <div class="s-form-button">
+                      <div class="s-form-button-inner">
+                        <button class="js-address-button">Continue to shipping method</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!--Step 2 Shipping Method-->
+            <div id="shipping-method" class="shipping-container">
+              <div class="s-method-step" aria-current="step">
+                2
+              </div>
+              <div class="s-method-form">
+                <div class="s-method-header">
+                  <h4>Shipping method</h4>
+                </div>
+                <div class="s-method-summary">
+                  <div class="s-method-summary-container">
+                    
+                  </div>
+                  <button class="s-method-edit-button" onclick="location.href='#shipping-method'">EDIT</button>
+                </div>
+                <div class="s-method-body-content">
+                  <div class="deliver-options">
+                    
+                  </div>
+                  <div class="s-method-button-container">
+                    <button class="s-method-button" onclick="location.href='#payment-method'">Continue to payment</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Step 3 Payment Method-->
+            <div id="payment-method" class="s-payment-container">
+              <div class="s-payment-step" aria-current="step">
+                3
+              </div>
+              <div class="s-payment-form">
+                <div class="s-payment-header">
+                  <h4>Payment method</h4>
+                </div>
+                <div  class="s-payment-body-content inactive">
+                  <div class="contact-info-container">
+                    <div class="contact-info-text1">
+                      Contact information
+                    </div>
+                    <div>
+                      We’ll email order updates, or call if we have additional questions about your order.
+                    </div>
+                  </div>
+                  <!-- Email and Phone Number Fields -->
+                  <div class="contact-info-block">
+                    <div class="contact-email-div">
+                      <label for="contact-email">
+                        EMAIL ADDRESS <span class="required">*</span>
+                      </label>
+                      <input type="email" id="contact-email" class="s-payment-form-email-textbox" required 
+                        aria-required="true" aria-describedby="emailHelp" placeholder="example@domain.com">
+                      <small id="emailHelp" class="form-text text-muted">We’ll never share your email with anyone.</small>
+                    </div>
+                    
+                    <div class="contact-phoneNumber-div">
+                      <label for="contact-phoneNumber">
+                        PHONE NUMBER <span class="required">*</span>
+                      </label>
+                      <input type="tel" id="contact-phoneNumber" class="s-payment-form-phoneNumber-textbox" required 
+                            maxlength="11" aria-required="true" aria-describedby="phoneHelp" placeholder="09*********" 
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                      <small id="phoneHelp" class="form-text text-muted">Enter a valid 11-digit phone number.</small>
+                    </div>
+                  </div>
+                  <div class="payment-method-container">
+                    <div class="payment-method-text">
+                      Choose your payment method
+                    </div>
+                    <div class="payment-method-card-eWallet">
+                      <div class="payment-via-creditCard-container">
+                        <input type="radio" class="s-payment-input-radio" id="payment-via-creditCard-option" name="payment-option1" data-target="#creditCard">
+                        <label for="payment-via-creditCard-option">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 32 32">
+                            <rect width="32" height="32" fill="none" />
+                            <g fill="none">
+                              <g filter="url(#f336id6)">
+                                <rect width="27.938" height="17.906" x="2.031" y="11.969" fill="url(#f336id0)" rx="2.25" />
+                              </g>
+                              <path fill="url(#f336id1)" d="M2.031 17.969v-3.125H29.97v3.125z" />
+                              <path fill="url(#f336id2)" d="M2.031 17.969v-3.125H29.97v3.125z" />
+                              <path fill="url(#f336id3)" d="M2.031 17.969v-3.125H29.97v3.125z" />
+                              <g filter="url(#f336id7)">
+                                <path fill="#e2ddde" d="M5.719 23.969a.75.75 0 0 1-.75-.75v-2.5a.75.75 0 0 1 .75-.75H23a.75.75 0 0 1 .75.75v2.5a.75.75 0 0 1-.75.75z" />
+                              </g>
+                              <g filter="url(#f336id8)">
+                                <rect width="11.813" height="1" x="6.063" y="21.5" fill="url(#f336id4)" rx=".5" />
+                              </g>
+                              <g filter="url(#f336id9)">
+                                <rect width="3.531" height="3.531" x="24.375" y="24.313" fill="url(#f336id5)" rx=".75" />
+                              </g>
+                              <defs>
+                                <linearGradient id="f336id0" x1="16" x2="16" y1="11.969" y2="29.063" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#57d8f2" />
+                                  <stop offset="1" stop-color="#36a3e7" />
+                                </linearGradient>
+                                <linearGradient id="f336id1" x1="2.031" x2="29.969" y1="17.063" y2="17.063" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#5d476d" />
+                                  <stop offset=".88" stop-color="#3d3b3b" />
+                                </linearGradient>
+                                <linearGradient id="f336id2" x1="2.031" x2="3.535" y1="16.794" y2="16.794" gradientUnits="userSpaceOnUse">
+                                  <stop offset=".239" stop-color="#513e5f" />
+                                  <stop offset=".707" stop-color="#513e5f" stop-opacity="0" />
+                                </linearGradient>
+                                <linearGradient id="f336id3" x1="29.969" x2="29.281" y1="16.938" y2="16.938" gradientUnits="userSpaceOnUse">
+                                  <stop offset=".328" stop-color="#474646" />
+                                  <stop offset="1" stop-color="#474646" stop-opacity="0" />
+                                </linearGradient>
+                                <linearGradient id="f336id4" x1="6.063" x2="16.938" y1="22" y2="22" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#a5a0a1" />
+                                  <stop offset="1" stop-color="#a6a2a2" />
+                                </linearGradient>
+                                <linearGradient id="f336id5" x1="27.906" x2="25.031" y1="25.719" y2="25.719" gradientUnits="userSpaceOnUse">
+                                  <stop stop-color="#f9d940" />
+                                  <stop offset="1" stop-color="#eac037" />
+                                </linearGradient>
+                                <filter id="f336id6" width="28.738" height="18.706" x="1.631" y="11.569" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                  <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx=".4" dy="-.4" />
+                                  <feGaussianBlur stdDeviation=".375" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.254902 0 0 0 0 0.580392 0 0 0 0 0.764706 0 0 0 1 0" />
+                                  <feBlend in2="shape" result="effect1_innerShadow_18_21638" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dy="-.4" />
+                                  <feGaussianBlur stdDeviation=".375" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.223529 0 0 0 0 0.419608 0 0 0 0 0.639216 0 0 0 1 0" />
+                                  <feBlend in2="effect1_innerShadow_18_21638" result="effect2_innerShadow_18_21638" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx="-.4" dy=".4" />
+                                  <feGaussianBlur stdDeviation=".375" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.380392 0 0 0 0 0.929412 0 0 0 0 1 0 0 0 1 0" />
+                                  <feBlend in2="effect2_innerShadow_18_21638" result="effect3_innerShadow_18_21638" />
+                                </filter>
+                                <filter id="f336id7" width="19.181" height="4.4" x="4.669" y="19.869" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx="-.1" dy=".1" />
+                                  <feGaussianBlur stdDeviation=".1" />
+                                  <feComposite in2="hardAlpha" operator="out" />
+                                  <feColorMatrix values="0 0 0 0 0.211765 0 0 0 0 0.580392 0 0 0 0 0.807843 0 0 0 1 0" />
+                                  <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_18_21638" />
+                                  <feBlend in="SourceGraphic" in2="effect1_dropShadow_18_21638" result="shape" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx=".1" dy="-.1" />
+                                  <feGaussianBlur stdDeviation=".075" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.788235 0 0 0 0 0.764706 0 0 0 0 0.784314 0 0 0 1 0" />
+                                  <feBlend in2="shape" result="effect2_innerShadow_18_21638" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx="-.1" dy=".1" />
+                                  <feGaussianBlur stdDeviation=".075" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.921569 0 0 0 0 0.92549 0 0 0 0 0.92549 0 0 0 1 0" />
+                                  <feBlend in2="effect2_innerShadow_18_21638" result="effect3_innerShadow_18_21638" />
+                                </filter>
+                                <filter id="f336id8" width="12.012" height="1.3" x="5.963" y="21.4" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dy=".1" />
+                                  <feGaussianBlur stdDeviation=".05" />
+                                  <feComposite in2="hardAlpha" operator="out" />
+                                  <feColorMatrix values="0 0 0 0 0.819608 0 0 0 0 0.788235 0 0 0 0 0.792157 0 0 0 1 0" />
+                                  <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_18_21638" />
+                                  <feBlend in="SourceGraphic" in2="effect1_dropShadow_18_21638" result="shape" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dy="-.1" />
+                                  <feGaussianBlur stdDeviation=".05" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.615686 0 0 0 0 0.592157 0 0 0 0 0.592157 0 0 0 1 0" />
+                                  <feBlend in2="shape" result="effect2_innerShadow_18_21638" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dy=".1" />
+                                  <feGaussianBlur stdDeviation=".05" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.670588 0 0 0 0 0.662745 0 0 0 0 0.662745 0 0 0 1 0" />
+                                  <feBlend in2="effect2_innerShadow_18_21638" result="effect3_innerShadow_18_21638" />
+                                </filter>
+                                <filter id="f336id9" width="4.131" height="4.131" x="23.875" y="24.113" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx="-.2" dy=".1" />
+                                  <feGaussianBlur stdDeviation=".15" />
+                                  <feComposite in2="hardAlpha" operator="out" />
+                                  <feColorMatrix values="0 0 0 0 0.2 0 0 0 0 0.596078 0 0 0 0 0.835294 0 0 0 1 0" />
+                                  <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_18_21638" />
+                                  <feBlend in="SourceGraphic" in2="effect1_dropShadow_18_21638" result="shape" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx="-.1" dy=".1" />
+                                  <feGaussianBlur stdDeviation=".2" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.996078 0 0 0 0 0.905882 0 0 0 0 0.309804 0 0 0 1 0" />
+                                  <feBlend in2="shape" result="effect2_innerShadow_18_21638" />
+                                  <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                                  <feOffset dx=".1" dy="-.1" />
+                                  <feGaussianBlur stdDeviation=".2" />
+                                  <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic" />
+                                  <feColorMatrix values="0 0 0 0 0.870588 0 0 0 0 0.694118 0 0 0 0 0.2 0 0 0 1 0" />
+                                  <feBlend in2="effect2_innerShadow_18_21638" result="effect3_innerShadow_18_21638" />
+                                </filter>
+                              </defs>
+                            </g>
+                          </svg>
+                        </label>
+                        <div class="creditCard-text">
+                          Credit Card
+                        </div>
+                      </div>
+                      <div class="payment-via-eWallet-container">
+                        <input type="radio" class="s-payment-input-radio", id="payment-via-eWallet-option" name="payment-option1" data-target="#eWallet">
+                        <label for="payment-via-eWallet-option">
+                          <svg class="eWallet-svg" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24">
+                            <rect width="25" height="25" fill="none" />
+                            <path fill="blueviolet" d="M23.596 13.43H11.562a2.46 2.46 0 0 0-2.639 2.231l-.001.009a2.47 2.47 0 0 0 2.683 2.239l-.009.001h12a.57.57 0 0 0 .621-.527v-3.424a.61.61 0 0 0-.604-.529h-.018zm-12.034 3.638a1.43 1.43 0 1 1 1.43-1.43v.004c0 .788-.639 1.426-1.426 1.426zM3.295 0v6.404h1.368V3.668c.138.034.298.056.462.062h.004a1.87 1.87 0 0 0 1.866-1.865a2 2 0 0 0-.066-.481l.003.015h7.492a2.3 2.3 0 0 0-.062.462v.004a1.87 1.87 0 0 0 1.865 1.866q.252-.009.483-.066l-.016.003v2.736h1.401V0zm15.389 5.626h1.741a2.27 2.27 0 0 0-1.727-1.49l-.014-.002z" />
+                            <path fill="slateblue" d="M11.471 12.684h11.938V9.047a2.066 2.066 0 0 0-2.217-1.865h.007h-18.96a.1.1 0 0 0-.062-.031a.81.81 0 0 1-.466-.682v-.002a.89.89 0 0 1 .647-.776l.006-.001V4.105C1.057 4.167 0 6.032 0 8.364v13.772A2.067 2.067 0 0 0 2.215 24h-.007h18.96a2.065 2.065 0 0 0 2.207-1.857l.001-.008v-3.637H11.504c-1.927 0-3.482-1.306-3.482-2.891c0-1.616 1.554-2.922 3.45-2.922z" />
+                          </svg>
+                        </label>
+                        <div class="eWallet-text">
+                          E-Wallet
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="creditCard" class="payment-via-creditCard-block inactive">
+                    <div class="creditCard-form-container">
+                      <div class="payment-creditCard-logo">
+                      <div class="payment-creditCard-text">
+                        Accepted payment methods:
+                      </div>
+                      <div>
+                        <img class="visaCard" src="frontend/src/images/icons/visacard.png" alt="visa card">
+                      </div>
+                      <div>
+                        <img class="masterCard" src="frontend/src/images/icons/mc_symbol_opt_73_3x.png" alt="master card">
+                      </div>
+                      <div>
+                        <img class="jcbCard" src="frontend/src/images/icons/jbccard.png" alt="jbc card">
+                      </div>
+                    </div>
+                    <div class="instruction-content">                        
+                        <p>
+                          <span style="color: blueviolet;">*</span>
+                          Indicates required field
+                        </p>
+                    </div>
+                      <div class="creditCard-accountName">
+                        <label for="creditCard-accountName-default">
+                          NAME AS IT APPEARS ON CARD 
+                          <span style="color: blueviolet;">
+                            *
+                          </span>
+                        </label>
+                        <input autofocus type="text" class="creditCard-accountName-textbox" id="creditCard-accountName-default">
+                      </div>
+                      <div class="creditCard-number-cvv-container">
+                        <div class="creditCard-number">
+                          <label for="creditCard-number-default">
+                            CARD NUMBER 
+                            <span style="color: blueviolet;">
+                              *
+                            </span>
+                          </label>
+                          <input type="text" id="creditCard-number-default" class="creditCard-number-textbox" maxlength="19">
+                        </div>
+                        <div class="creditCard-cvv">
+                          <label for="creditCard-cvv-default">
+                            CVV
+                            <span style="color: blueviolet;">
+                              *
+                            </span>
+                          </label>
+                          <input autofocus type="text" class="creditCard-cvv-textbox" id="creditCard-cvv-default" maxlength="3">
+                        </div>
+                      </div>
+                      <div class="creditCard-expiry-date">
+                        <div class="creditCard-expiry-month">
+                          <label for="creditCard-expiry-month">
+                            EXPIRATION MONTH
+                            <span style="color: blueviolet;">*</span>
+                          </label>
+                          <select id="creditCard-expiry-month" class="expiry-dropdown">
+                            <option value="" disabled selected>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                          </select>
+                        </div>
+                        <div class="creditCard-expiry-year">
+                          <label for="creditCard-expiry-year">
+                            EXPIRATION YEAR
+                            <span style="color: blueviolet;">*</span>
+                          </label>
+                          <select id="creditCard-expiry-year" class="expiry-dropdown">
+                            <option value="" disabled selected>Year</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="eWallet" class="eWallet-form-container inactive">
+                      <div class="paypal-payment-container">
+                        <input type="radio" class="paypal-payment-input" id="paypal-payment-default" name="payment-option2">
+                        <label for="paypal-payment-default">
+                          <img src="frontend/src/images/icons/PayPal.svg.png" alt="gcash">
+                        </label>
+                      </div>
+                      <div class="gcash-payment-container">
+                        <input type="radio" class="gcash-payment-input" id="gcash-payment-default" name="payment-option2">
+                        <label for="gcash-payment-default">
+                          <img src="frontend/src/images/icons/gcash.png" alt="gcash">
+                        </label>
+                      </div>
+                      <div class="maya-payment-container">
+                        <input type="radio" class="maya-payment-container" id="maya-payment-default" name="payment-option2">
+                        <label for="maya-payment-default">
+                          <img src="frontend/src/images/icons/Maya_logo.svg.png" alt="gcash">
+                        </label>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--right side of checkout container-->
+        <div class="right-side-container">
+          <div class="order-summary-container">
+            <!--order summary container-->
+            <div class="order-summary-block">
+              <div class="order-summary-header">
+                <p>Order Summary</p>
+              </div>
+              <!--order summary body content-->
+              <div class="order-summary-body-content">
+                <div class="voucher-gift-container">
+                  <div class="voucher-input-box-container">
+                    <label for="voucher-code">
+                      Promo code
+                      <span>
+                        3 per order maximum
+                      </span>
+                    </label>
+                    <div class="voucher-input-container">
+                      <input type="text" class="voucher-code" id="voucher-code" autofocus required placeholder="Apply a Voucher Code">
+                      <button id="sumbit-voucher-code" class="voucher-apply-button">APPLY</button>
+                    </div>
+                  </div>
+
+                  <div class="pricing-div-container">
+                    <div class="total-items-price-container">
+                      <div class="total-items-container js-product-cart-quantity-summary">
+        
+                      </div>
+                      <div class="total-price-container js-items-total-price">
+                  
+                      </div>
+                    </div>
+
+                    <div class="shipping-handling-container">
+                      <div class="shipping-handling-text">
+                        Shipping & Handling:
+                      </div>
+                      <div class="shipping-handling-price js-payment-shipping-price">
+                        &#8369; 0.00
+                      </div>
+                    </div>
+
+                    <div class="voucer-discount-container">
+                      <div class="voucer-discount-text">
+                        Voucher Discount:
+                      </div>
+                      <div class="voucer-discount-price js-voucher-discount">
+                        
+                      </div>
+                    </div>
+
+                    <div class="total-before-tax-container">
+                      <div class="total-before-tax-text">
+                        Total Before Tax:
+                      </div>
+                      <div class="total-before-tax-price js-total-before-tax-price">
+                        
+                    </div>
+                  </div>
+
+                  <div class="estimated-tax-container">
+                    <div class="estimated-tax-text">
+                      Estimated Tax (12%):
+                    </div>
+                    <div class="estimated-tax-price  js-estimated-tax">
+                      
+                    </div>
+                  </div>
+
+                  <div class="order-total-price-container">
+                    <div class="total-price-text">
+                      Order Total:
+                    </div>
+                    <div class="total-price-price js-total-price">
+
+                    </div>
+                  </div>
+                  </div>
+                  <div class="place-order-button-container">
+                    <button class="place-order-button">Place Order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Order cart summary-->
+            <div class="order-cart-block">
+
+              <div class="order-cart-header">
+                <svg class="cart-summary-cart-header" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
+                  <rect width="24" height="24" fill="none" />
+                  <path class="cart-icon-path1" fill="currentColor" d="M7.25 9A.75.75 0 0 1 8 8.25h3a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 7.25 9" />
+                  <path class="cart-icon-path2" fill="currentColor" fill-rule="evenodd" d="M1.289 2.763a.75.75 0 0 1 .948-.475l.305.102c.626.209 1.155.385 1.572.579c.442.206.826.46 1.117.865c.291.403.412.848.467 1.333l.009.083h10.804c.976 0 1.792 0 2.417.092c.651.097 1.28.318 1.676.92c.396.6.352 1.265.184 1.902c-.16.61-.482 1.36-.867 2.258l-.467 1.089c-.176.412-.332.775-.493 1.062c-.175.31-.388.592-.711.805s-.667.298-1.021.337c-.328.035-.722.035-1.17.035H6.154c.074.134.159.244.255.341c.277.277.666.457 1.4.556c.755.101 1.756.103 3.191.103h8a.75.75 0 0 1 0 1.5h-8.055c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337V6.883c0-.713 0-1.185-.042-1.546c-.04-.342-.107-.506-.194-.626c-.086-.12-.221-.237-.533-.382c-.33-.153-.777-.304-1.453-.53l-.265-.087a.75.75 0 0 1-.474-.95m4.518 9.487h10.215c.496 0 .809-.001 1.046-.027c.219-.023.303-.062.356-.097s.122-.097.23-.289c.117-.208.24-.495.436-.95l.429-1c.414-.968.69-1.616.819-2.106c.126-.476.062-.62.014-.694c-.049-.073-.157-.189-.644-.26c-.501-.075-1.205-.077-2.257-.077H5.75V9.5c0 1.172 0 2.054.056 2.75m1.694 9.5a2.25 2.25 0 1 1 0-4.5a2.25 2.25 0 0 1 0 4.5m-.75-2.25a.75.75 0 1 0 1.5 0a.75.75 0 0 0-1.5 0m7.5 0a2.25 2.25 0 1 0 4.5 0a2.25 2.25 0 0 0-4.5 0m2.25.75a.75.75 0 1 1 0-1.5a.75.75 0 0 1 0 1.5" clip-rule="evenodd" />
+                </svg>
+                <p>
+                  Your Cart 
+                  <span style="color: blueviolet;">
+                    (<span class="js-product-cart-summary-quantity">25</span>)
+                  </span>
+                </p>
+              </div>
+              <div class="cart-item-body-content">
+                <div class="cart-items-block js-cart-summary">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="frontend/src/scripts/DOM/checkout.js" type="module"></script>
+</body>
+</html>
