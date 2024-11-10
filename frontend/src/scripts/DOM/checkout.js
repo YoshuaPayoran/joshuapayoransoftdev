@@ -5,6 +5,7 @@ import { deliveryOptions } from '../data/delivery-options.js';
 import { formatPesoMoney } from '../utils/money.js'
 import { renderPaymentSummary, updatePaymentShippingOption, voucherDiscount } from '../function/payment-summary.js';
 import { updateCartSummaryItem } from '../function/order-items-summary.js';
+import { provinces } from '../data/provinces.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 creditCardPattern();
 
@@ -30,6 +31,15 @@ function validateForm() {
     location.href = '#shipping-method'; 
   }
 }
+let provincesOptions = '';
+provinces.forEach((province) => {
+  provincesOptions += `
+    <option value="${province.value}">${province.name}</option>
+  `
+});
+
+document.querySelector('.js-address-select')
+  .innerHTML = provincesOptions;
 
 function shippingSummaryHTML(province) {
   const summaryInfo = shippingSummaryInfo(inputElements);
