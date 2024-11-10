@@ -3,7 +3,7 @@ import { addressFormCompleted, continuePaymentMethod} from '../checkout/forms.js
 import { isInputEmpty, getProvinceStatus, shippingSummaryInfo, selectedDeliveryOption, validateZipCode } from '../function/shippingform.js';
 import { deliveryOptions } from '../data/delivery-options.js';
 import { formatPesoMoney } from '../utils/money.js'
-import { renderPaymentSummary, updatePaymentShippingOption } from '../function/payment-summary.js';
+import { renderPaymentSummary, updatePaymentShippingOption, voucherDiscount } from '../function/payment-summary.js';
 import { updateCartSummaryItem } from '../function/order-items-summary.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 creditCardPattern();
@@ -158,3 +158,4 @@ function priceFree() {
 }
 updateCartSummaryItem();
 renderPaymentSummary();
+voucherDiscount();
