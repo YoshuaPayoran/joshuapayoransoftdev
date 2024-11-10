@@ -206,6 +206,13 @@
   cursor: pointer;
 }
 
+.s-form-button-inner button:hover {
+  background-color: rgb(125, 32, 212);
+}
+
+.s-form-button-inner button:active {
+  background-color: rgb(157, 69, 240);
+}
 /*
   Shipping for display when --completed-- 
 */
@@ -378,7 +385,7 @@
 }
 
 .s-method-button-container button {
-  padding: 10px 0;
+  padding: 12px 0;
   max-width: 520px;
   width: 100%;
   border: none;
@@ -388,6 +395,14 @@
   color: white;
   font-weight: 500;
   cursor: pointer;
+}
+
+.s-method-button-container button:hover {
+  background-color: rgb(125, 32, 212);
+}
+
+.s-method-button-container button:active {
+  background-color: rgb(157, 69, 240);
 }
 
 .contact-info-container {

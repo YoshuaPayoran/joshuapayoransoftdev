@@ -61,6 +61,11 @@
   font-size: 15px;
   font-family: 'Poppins', sans-serif;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.voucher-apply-button:hover {
+  background-color: rgb(125, 32, 212);
 }
 
 .pricing-div-container {
