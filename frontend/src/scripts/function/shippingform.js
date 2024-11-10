@@ -24,8 +24,8 @@ export function getProvinceStatus(selectElements) {
 
   selectElements.forEach((select) => {
     if (select.value === 'default' || select.value === '') {
-      isEmpty = true;
       selectionError.classList.add('show-object');
+      isEmpty = true;
       return;
     } else {
       selectionError.classList.remove('show-object');
