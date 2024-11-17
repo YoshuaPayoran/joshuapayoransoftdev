@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="frontend/src/styles/pages/checkout/order-summary.css">
   <link rel="stylesheet" href="frontend/src/styles/shared/animations.css">
   <link rel="stylesheet" href="frontend/src/styles/shared/general.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Checkout.com</title>
   <link rel="icon" type="image/x-icon" href="frontend/src/images/logos/logo.png">
 </head>
@@ -22,39 +23,11 @@
       FREE SHIPPING ABOVE PHP 25,000 ORDER
     </div>
     <div class="logo-ticker">
-      <ul>
-        <li>
-          Get more for less—shop now!
-        </li>
-        <li>
-          Flash sale items—don’t miss out!
-        </li>
-        <li>
-          Unlock discounts at checkout!
-        </li>
-        <li>
-          Final sale—best prices today!
-        </li>
-        <li>
-          Limited-time offers just for you!
-        </li>
+      <ul class="first-loop">
+
       </ul>
-      <ul aria-hidden="true">
-        <li>
-          Get more for less—shop now!
-        </li>
-        <li>
-          Flash sale items—don’t miss out!
-        </li>
-        <li>
-          Unlock discounts at checkout!
-        </li>
-        <li>
-          Final sale—best prices today!
-        </li>
-        <li>
-          Limited-time offers just for you!
-        </li>
+      <ul aria-hidden="true" class="second-loop">
+        
       </ul>
     </div>
     <div class="cart-header-inner-container">
@@ -695,5 +668,9 @@
   </div>
 
   <script src="frontend/src/scripts/DOM/checkout.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

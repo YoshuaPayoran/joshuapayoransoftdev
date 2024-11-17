@@ -39,15 +39,29 @@
 
 .product-card {
   background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.product-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 5px; /* Height of the highlight */
+  background-color: blueviolet;
+  transform: translateX(-50%);
+  transition: width 0.3s ease; /* Matches the hover transition timing */
 }
+
+.product-card:hover::after {
+  width: 100%; /* Expands to full width on hover */
+}
+
 
 .product-card:hover .cart-icon-path1, 
 .product-card:hover .cart-icon-path2 {
@@ -55,7 +69,7 @@
 }
 
 .product-picture {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(230, 230, 230);
   padding: 15px;
   text-align: center;
   border-top-left-radius: 10px;
@@ -278,10 +292,10 @@ label {
 
 .overlay-product-name .name{
   font-family: 'Poppins', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .overlay-star-rating {
@@ -299,12 +313,12 @@ label {
 .product-stock {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-  margin-top: 5px;
+  margin-top: 3px;
   color: rgb(60, 60, 60);
 }
 
 .size-option {
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .size-text {

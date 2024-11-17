@@ -6,6 +6,7 @@ import { formatPesoMoney } from '../utils/money.js'
 import { renderPaymentSummary, updatePaymentShippingOption, voucherDiscount } from '../function/payment-summary.js';
 import { updateCartSummaryItem } from '../function/order-items-summary.js';
 import { provinces } from '../data/provinces.js';
+import { generateNewsHTML } from '../data/infinite-news.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 creditCardPattern();
 
@@ -169,3 +170,4 @@ function priceFree() {
 updateCartSummaryItem();
 renderPaymentSummary();
 voucherDiscount();
+generateNewsHTML();

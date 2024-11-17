@@ -5,13 +5,16 @@ import { productCartOverlay, updateCartQuantity } from './product-overlay.js';
 
 let popularProductsHTML = '';
 
-popularProducts.forEach((products) => {
+popularProducts.forEach((products, index) => {
   const  productRating = starRating(products);
   const priceCents = formatPesoMoney(products.priceCents);
+  const delay = index * 100;
 
   popularProductsHTML += 
     `
-      <div class="product-card js-product-card" data-product-id="${products.id}">
+      <div class="product-card js-product-card" data-product-id="${products.id}" data-aos="fade-up"
+      data-aos-delay="${delay}"
+      data-aos-anchor-placement="bottom-bottom">
         <img class="product-logo" src="${products.logo}" alt="product logo">
         <div class="product-picture">
             <img src="${products.image}">
