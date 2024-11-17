@@ -1,10 +1,10 @@
-import { creditCardPattern } from '../checkout/creditCard.js';
-import { addressFormCompleted, continuePaymentMethod} from '../checkout/forms.js';
+import { creditCardPattern } from '../function/creditCard.js';
+import { addressFormCompleted, continuePaymentMethod} from '../function/forms.js';
 import { isInputEmpty, getProvinceStatus, shippingSummaryInfo, selectedDeliveryOption, validateZipCode } from '../function/shippingform.js';
 import { deliveryOptions } from '../data/delivery-options.js';
 import { formatPesoMoney } from '../utils/money.js'
 import { renderPaymentSummary, updatePaymentShippingOption, voucherDiscount } from '../function/payment-summary.js';
-import { updateCartSummaryItem } from '../function/order-items-summary.js';
+import { updateCartSummaryItem } from './order-items-summary.js';
 import { provinces } from '../data/provinces.js';
 import { generateNewsHTML } from '../data/infinite-news.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';

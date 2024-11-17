@@ -1,7 +1,7 @@
 import { productCart, removeFromCart } from "../data/product-cart.js";
 import { matchingProductId } from "../utils/matched-id.js";
 import { formatPesoMoney } from "../utils/money.js";
-import { renderPaymentSummary } from "./payment-summary.js";
+import { renderPaymentSummary } from "../function/payment-summary.js";
 
 export function updateCartSummaryItem() {
   let cartSummaryHTML = '';
