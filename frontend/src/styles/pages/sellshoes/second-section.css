@@ -165,7 +165,6 @@
 .product-overlay-inner-container {
   width: auto;
   max-width: 1000px;
-  height: 700px;
   background-color: white;
   border-radius: 20px;
   border-width: 2px;
@@ -238,7 +237,7 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin: 15px 40px 0 30px;
+  margin: 15px 40px 65px 40px;
 }
 
 .product-detail-left {
@@ -247,7 +246,13 @@ label {
   gap: 10px;
 }
 
-.product-angle-images img{
+.shoes-color-options img{
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.product-angle-images img,
+.shoes-color-options img{
   width: 55px;
   height: 55px;
   border-radius: 5px;
@@ -255,6 +260,10 @@ label {
   border: 1px solid slateblue;
   cursor: pointer;
   transition: border-color 0.15s;
+}
+
+.js-other-color.selected-color{
+  border: 1px solid orangered;
 }
 
 .product-angle-images img:hover {
@@ -285,7 +294,7 @@ label {
 
 .product-detail-right {
   display: flex;
-  padding: 0 20px;
+  padding: 0 10px;
   width: 100%;
   flex-direction: column;
 }
@@ -293,7 +302,7 @@ label {
 .overlay-product-name .name{
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 24px;
   font-weight: 500;
   margin-bottom: 8px;
 }
@@ -322,20 +331,20 @@ label {
 }
 
 .size-text {
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Poppins', sans-serif;
 }
 
 .sizes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
   row-gap: 10px;
   column-gap: 10px;
   margin-top: 10px;
 }
 
 .sizes div {
-  padding: 5px 10px;
+  padding: 4px 0;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(181, 181, 181);
@@ -343,7 +352,7 @@ label {
   border-radius: 5px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
   transition: all 0.3s ease; 
 }
 

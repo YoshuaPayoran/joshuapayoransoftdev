@@ -14,7 +14,6 @@ export function productCartOverlay () {
   });
 }
 
-
 const closeOverylayBtn = document.querySelector('.close-product-overlay');
 const closeProductOverlay = document.getElementById('product-overlay');
 
@@ -25,27 +24,34 @@ closeOverylayBtn.addEventListener('click', () => {
 
 function viewProductOverlay(productId) {
   const matchedId = matchingProductId(productId);
+  const productDetails = generateProductDetails(matchedId);
+
   const overlayProduct = document.querySelector('.product-details');
-  overlayProduct.innerHTML = generateProductDetails(matchedId);
-  document.getElementById('product-overlay')
-    .classList.add('show-product-overlay');
+  overlayProduct.innerHTML = productDetails.productDetailsHTML;
+
+  document.getElementById('product-overlay').classList.add('show-product-overlay');
   document.body.classList.add('no-scroll');
+
+  viewOtherColors(matchedId); 
   activeState();
   quantityManager();
   viewOtherImage();
-  selectSize(matchedId);
   addToCartButton(productId);
-};
+  selectSize(productDetails.selectedColorId);
+}
 
 function generateProductDetails(matchedId) {
   const priceCents = formatPesoMoney(matchedId.priceCents);
-  return `
+  const selectedColorId = viewOtherColors (matchedId);
+  let productDetailsHTML = '';
+
+  productDetailsHTML +=`
     <div class="product-detail-left">
       <div class="product-angle-images">
-        ${otherViewImages(matchedId)}
+        ${otherViewImages(selectedColorId)}
       </div>
       <div class="product-main-image-view">
-        <img class="product-main-image js-product-main-image" src="${matchedId.mainImage}" alt="product">
+        <img class="product-main-image js-product-main-image" src="${selectedColorId.mainImage}" alt="product">
         <img class="overlay-product-logo" src="${matchedId.logo}" alt="product logo">
       </div>
     </div>
@@ -61,7 +67,13 @@ function generateProductDetails(matchedId) {
           &#8369 ${priceCents}
         </div>
         <div class="product-stock js-product-stock">
-          Stock: ${productTotalStock(matchedId)}
+          Stock: ${productTotalStock(selectedColorId)}
+        </div>
+      </div>
+
+      <div class="shoes-color-container">
+        <div class="shoes-color-options">
+          ${otherProductColor(matchedId)}
         </div>
       </div>
 
@@ -70,7 +82,7 @@ function generateProductDetails(matchedId) {
           Select Size:
         </div>
         <div id="js-product-sizes" class="sizes">
-          ${overlayProductSizes(matchedId)}
+          ${overlayProductSizes(selectedColorId)}
         </div>
       </div>
 
@@ -116,12 +128,63 @@ function generateProductDetails(matchedId) {
     </div>
   
   `
+
+  return {selectedColorId, productDetailsHTML}
 }
 
-function otherViewImages(matchedId) {
+function otherProductColor(matchedId) {
+  let otherColorHTML = '';
+  matchedId.colors.forEach((itemColor, index) => {
+    otherColorHTML += `
+      <img class="js-other-color ${index === 0 ? 'selected-color' : ''}" src="${itemColor.mainImage}" data-color-id="${itemColor.colorId}">
+    `;
+  });
+
+  return otherColorHTML;
+}
+
+let currentColorId = 'first_color';
+
+function viewOtherColors(matchedId) {
+  let selectedColorId = matchedId.colors.find(color => color.colorId === currentColorId);
+
+  const selectedColors = document.querySelectorAll('.js-other-color');
+
+  selectedColors.forEach((color) => {
+    color.addEventListener('click', (event) => {
+      currentColorId = event.target.dataset.colorId;
+      selectedColorId = matchedId.colors.find(color => color.colorId === currentColorId);
+
+      document.querySelector('.product-main-image').src = selectedColorId.mainImage;
+
+      const otherImagesContainer = document.querySelector('.product-angle-images');
+      otherImagesContainer.innerHTML = otherViewImages(selectedColorId);
+
+      viewOtherImage();
+
+      updateStockAndSizeInfo(selectedColorId);
+
+      disabledActionButtons();
+
+      selectedColorStyle();
+      event.target.classList.add('selected-color');c
+    });
+  });
+
+  return selectedColorId;
+}
+
+function selectedColorStyle () {
+  const selectedColors = document.querySelectorAll('.js-other-color');
+  selectedColors.forEach((color) => {
+    color.classList.remove('selected-color');
+  });
+}
+
+function otherViewImages(selectedColorId) {
   let viewOtherImages = '';
 
-  matchedId.otherImages.forEach((otherImage) => {
+  selectedColorId.otherImages.forEach((otherImage) => {
     viewOtherImages += `
       <img class="js-other-view" src="${otherImage}" alt="">
     `
@@ -135,8 +198,7 @@ function viewOtherImage() {
   otherImages.forEach((otherImage) => {
     otherImage.addEventListener('mouseover', () => {
       const imgSrc = otherImage.src;
-      const viewSrc = imgSrc.replace(window.location.origin + '', '');
-      mainImage.src = viewSrc;
+      mainImage.src = imgSrc;
     });
   });
 }
@@ -146,17 +208,38 @@ function productStars(matchedId) {
   return overlayProductStar.stars;
 };
 
-function productTotalStock(matchedId) {
+function updateStockAndSizeInfo(selectedColorId) {
+  const sizeStock = document.querySelector('.js-product-stock');
+  const setMaxValue = document.querySelector('.input-box');
+  let matchedSize;
+
+  const availableStock = productTotalStock(selectedColorId);
+  sizeStock.textContent = `Stock: ${availableStock}`;
+
+  setMaxValue.max = availableStock;
+  setMaxValue.value = 1;
+
+  updateSizeOptions(selectedColorId);
+}
+
+function updateSizeOptions(selectedColorId) {
+  const sizeContainer = document.getElementById('js-product-sizes');
+  sizeContainer.innerHTML = overlayProductSizes(selectedColorId);
+  
+  selectSize(selectedColorId);
+}
+
+function productTotalStock(selectedColorId) {
   let totalStock = 0;
-  matchedId.sizes.forEach((sizes) => {
+  selectedColorId.sizes.forEach((sizes) => {
     totalStock += sizes.stock;
   });
   return totalStock;
 };
 
-function overlayProductSizes(matchedId) {
+function overlayProductSizes(selectedColorId) {
   let sizesHTML = '';
-  matchedId.sizes.forEach((sizes) => {
+  selectedColorId.sizes.forEach((sizes) => {
     sizesHTML += `
       <div class="js-product-size">${sizes.size}</div>
     `
@@ -166,32 +249,33 @@ function overlayProductSizes(matchedId) {
 
 let selectedSizeText;
 
-function selectSize(matchedId) {
+function selectSize(selectedColorId) {
   const selectedSizes = document.querySelectorAll('.js-product-size');
-
+  
   selectedSizes.forEach((size) => {
     size.addEventListener('click', () => {
       selectedSizeText = size.textContent.trim();
       selectedSizes.forEach((s) => s.classList.remove('selected-size'));
       size.classList.add('selected-size');
+
       enableActionButtons();
-      selectedProductSize(matchedId, selectedSizeText);
-      size.classList.add('selected-size');
+      selectedProductSize(selectedColorId);
     });
   });
-  return selectedSizeText;
 }
 
-function selectedProductSize(matchedId) {
+function selectedProductSize(selectedColorId) {
   const setMaxValue = document.querySelector('.input-box');
   const sizeStock = document.querySelector('.js-product-stock');
   let matchedSize;
   setMaxValue.value = 1;
-  matchedId.sizes.forEach((sizeObj) => {
+
+  selectedColorId.sizes.forEach((sizeObj) => {
     if (sizeObj.size === selectedSizeText) {
       matchedSize = sizeObj;
     }
   });
+
   sizeStock.textContent = `Stock: ${matchedSize.stock}`;
   setMaxValue.max = matchedSize.stock;
 }
@@ -200,7 +284,7 @@ function addToCart(productId, quantityValue) {
   let matchingItem;
 
   productCart.forEach((cartItem) => {
-    if(productId === cartItem.productId && selectedSizeText === cartItem.size) {
+    if(productId === cartItem.productId && selectedSizeText === cartItem.size && currentColorId === cartItem.color) {
       matchingItem = cartItem;
     }
   });
@@ -211,11 +295,20 @@ function addToCart(productId, quantityValue) {
     productCart.push({
       productId: productId,
       quantity: quantityValue,
-      size: selectedSizeText
+      size: selectedSizeText,
+      color: currentColorId
     });
   }
-
   saveToStorage();
+}
+
+function addToCartButton(productId, colorId) {
+  const cartBtnElement = document.querySelector('.js-product-add-to-cart-button');
+  cartBtnElement.addEventListener('click', () => {
+    const quantityValue = getCurrentQuantity();
+    addToCart(productId, quantityValue,);
+    updateCartQuantity();
+  });
 }
 
 export function updateCartQuantity() {
@@ -232,18 +325,16 @@ export function updateCartQuantity() {
   }
 }
 
-function addToCartButton(productId) {
-  const cartBtnElement = document.querySelector('.js-product-add-to-cart-button');
-  cartBtnElement.addEventListener('click', () => {
-    const quantityValue = getCurrentQuantity();
-    addToCart(productId, quantityValue);
-    updateCartQuantity();
-  });
-}
-
 function enableActionButtons() {
   document.querySelector('.js-product-add-to-cart-button').classList.remove('disabled');
   document.querySelector('.js-quantity-container').classList.remove('disabled');
   document.querySelector('.js-increase-btn').classList.remove('disabled');
   document.querySelector('.js-decrease-btn').classList.remove('disabled');
+}
+
+function disabledActionButtons() {
+  document.querySelector('.js-product-add-to-cart-button').classList.add('disabled');
+  document.querySelector('.js-quantity-container').classList.add('disabled');
+  document.querySelector('.js-increase-btn').classList.add('disabled');
+  document.querySelector('.js-decrease-btn').classList.add('disabled');
 }

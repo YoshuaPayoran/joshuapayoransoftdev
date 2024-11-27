@@ -9,3 +9,19 @@ export function matchingProductId (productId) {
   });
   return matchedId;
 }
+
+export function matchingColorId (productId, selectedColorId){
+  let matchedColorId;
+
+  popularProducts.forEach((product) => {
+    if(product.id === productId) {
+      product.colors.forEach((color) => {
+        if(color.colorId === selectedColorId){
+          matchedColorId = color;
+        }
+      });
+    }
+  });
+  
+  return matchedColorId;
+}

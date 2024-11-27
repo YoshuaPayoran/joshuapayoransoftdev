@@ -1,5 +1,5 @@
 import { productCart, removeFromCart } from "../data/product-cart.js";
-import { matchingProductId } from "../utils/matched-id.js";
+import { matchingColorId, matchingProductId } from "../utils/matched-id.js";
 import { formatPesoMoney } from "../utils/money.js";
 import { renderPaymentSummary } from "../function/payment-summary.js";
 
@@ -9,6 +9,8 @@ export function updateCartSummaryItem() {
   // Generate cart summary HTML
   productCart.forEach((cartItem) => {
     const productId = cartItem.productId;
+    const selectedColorId = cartItem.color;
+    const matchedColorId = matchingColorId(productId, selectedColorId);
     const matchedId = matchingProductId(productId);
     const priceCents = formatPesoMoney(matchedId.priceCents);
 
@@ -16,7 +18,7 @@ export function updateCartSummaryItem() {
     `
       <div class="cart-item-container js-cart-item-container-${matchedId.id}">
         <div class="item-thumbnail">
-          <img src="${matchedId.mainImage}" alt="">
+          <img src="${matchedColorId.mainImage}" alt="">
         </div>
         <div class="item-info-block">
           <div class="item-info-container">
@@ -33,7 +35,7 @@ export function updateCartSummaryItem() {
               Quantity: ${cartItem.quantity}
             </div>
           </div>
-          <div class="delete-button js-delete-link" data-product-id="${matchedId.id}" data-product-size="${cartItem.size}">
+          <div class="delete-button js-delete-link" data-product-id="${matchedId.id}" data-product-size="${cartItem.size}" data-color-id="${selectedColorId}">
             <svg class="delete-button-svg" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
               <rect width="24" height="24" fill="none" />
               <g fill="none">
@@ -65,7 +67,8 @@ export function updateCartSummaryItem() {
     link.addEventListener('click', () => {
       const productId = link.dataset.productId;
       const productSize = link.dataset.productSize;
-      removeFromCart(productId, productSize);  
+      const productColorId = link.dataset.colorId;
+      removeFromCart(productId, productSize, productColorId);  
       updateCartSummaryItem(); 
       renderPaymentSummary();
     });

@@ -4,11 +4,11 @@ export function saveToStorage () {
   localStorage.setItem('productCart', JSON.stringify(productCart));
 }
 
-export function removeFromCart (productId, productSize) {
+export function removeFromCart (productId, productSize, productColorId) {
   const newCart = [];
 
   productCart.forEach((cartItem) => {
-    if (!(cartItem.productId === productId && cartItem.size === productSize)) {
+    if (!(cartItem.productId === productId && cartItem.size === productSize && cartItem.color === productColorId)) {
       newCart.push(cartItem);
     }
   });
