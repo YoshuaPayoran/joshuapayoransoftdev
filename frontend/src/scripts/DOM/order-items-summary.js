@@ -12,18 +12,18 @@ export function updateCartSummaryItem() {
     const selectedColorId = cartItem.color;
     const matchedColorId = matchingColorId(productId, selectedColorId);
     const matchedId = matchingProductId(productId);
-    const priceCents = formatPesoMoney(matchedId.priceCents);
+    const priceCents = formatPesoMoney(matchedColorId.priceCents);
 
     cartSummaryHTML += 
     `
-      <div class="cart-item-container js-cart-item-container-${matchedId.id}">
+      <div class="cart-item-container js-cart-item-container-${matchedId.id}-${matchedColorId.colorId}">
         <div class="item-thumbnail">
           <img src="${matchedColorId.mainImage}" alt="">
         </div>
         <div class="item-info-block">
           <div class="item-info-container">
             <div class="item-name">
-              ${matchedId.name}
+              ${matchedColorId.name}
             </div>
             <div class="item-price">
               &#8369; ${priceCents}
