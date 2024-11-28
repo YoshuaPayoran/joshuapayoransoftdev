@@ -13,8 +13,7 @@ popularProducts.forEach((products, index) => {
   popularProductsHTML += 
     `
       <div class="product-card js-product-card" data-product-id="${products.id}" data-aos="fade-up"
-      data-aos-delay="${delay}"
-      data-aos-anchor-placement="bottom-bottom">
+      data-aos-delay="${delay}">
         <img class="product-logo" src="${products.logo}" alt="product logo">
         <div class="product-picture">
             <img src="${products.image}">
