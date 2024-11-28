@@ -8,7 +8,7 @@ export function removeFromCart (productId, productSize, productColorId) {
   const newCart = [];
 
   productCart.forEach((cartItem) => {
-    if (!(cartItem.productId === productId && cartItem.size === productSize && cartItem.color === productColorId)) {
+    if (!(cartItem.productId === productId && cartItem.size === productSize && cartItem.colorId === productColorId)) {
       newCart.push(cartItem);
     }
   });
