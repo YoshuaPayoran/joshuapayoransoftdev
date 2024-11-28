@@ -71,13 +71,13 @@ function generateProductDetails(matchedId) {
     </div>
     <div class="product-detail-right">
       <div class="overlay-product-name">
-        <div class="name">
-          ${matchedId.name}
+        <div class="name js-product-name">
+          ${selectedColorId.name}
         </div>
         <div class="overlay-star-rating">
           ${productStars(matchedId)}
         </div>
-        <div class="price">
+        <div class="price js-product-price">
           &#8369 ${priceCents}
         </div>
         <div class="product-stock js-product-stock">
@@ -174,6 +174,8 @@ function viewOtherColors(matchedId) {
       const otherImagesContainer = document.querySelector('.product-angle-images');
       otherImagesContainer.innerHTML = otherViewImages(selectedColorId);
 
+      updateNameAndPrice(selectedColorId);
+
       viewOtherImage();
 
       updateStockAndSizeInfo(selectedColorId);
@@ -195,6 +197,15 @@ function selectedColorStyle () {
   });
 }
 
+function updateNameAndPrice(selectedColorId) {
+  const selectedColorName = document.querySelector('.js-product-name');
+  const selectedColorPrice = document.querySelector('.js-product-price');
+  const productPrice = formatPesoMoney(selectedColorId.priceCents);
+
+  selectedColorName.textContent = selectedColorId.name;
+  selectedColorPrice.innerHTML = `&#8369 ${productPrice}`;
+}
+
 function otherViewImages(selectedColorId) {
   let viewOtherImages = '';
 
@@ -203,7 +214,7 @@ function otherViewImages(selectedColorId) {
       <img class="js-other-view" src="${otherImage}" alt="">
     `
   });
-  return viewOtherImages;
+  return viewOtherImages
 };
 
 function viewOtherImage() {

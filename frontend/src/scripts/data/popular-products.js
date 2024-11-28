@@ -5,6 +5,8 @@ export const popularProducts = [{
   name: 'Jordan 4 Retro Black Cat',
   colors: [{
     colorId: 'first_color',
+    name: 'Jordan 4 Retro Black Cat',
+    priceCents: 8092500,
     mainImage: 'frontend/src/images/shoes/jordan/j_product_0001/j_product_0001_main.jpg',
     otherImages: [
       'frontend/src/images/shoes/jordan/j_product_0001/j_product_0001_main.jpg',
@@ -36,6 +38,8 @@ export const popularProducts = [{
   colors: [
     {
       colorId: 'first_color',
+      name: 'Nike Dunk Low',
+      priceCents: 449900,
       mainImage: 'frontend/src/images/shoes/nike/n_product_0002/first_color/first_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/nike/n_product_0002/first_color/first_color_main.png',
@@ -58,6 +62,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'second_color',
+      name: 'Nike Dunk Low',
+      priceCents: 549500,
       mainImage: 'frontend/src/images/shoes/nike/n_product_0002/second_color/second_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/nike/n_product_0002/second_color/second_color_main.png',
@@ -78,6 +84,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'third_color',
+      name: 'Nike Dunk Low',
+      priceCents: 439900,
       mainImage: 'frontend/src/images/shoes/nike/n_product_0002/third_color/third_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/nike/n_product_0002/third_color/third_color_main.png',
@@ -99,6 +107,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'fourth_color',
+      name: 'Nike Dunk Low',
+      priceCents: 562900,
       mainImage: 'frontend/src/images/shoes/nike/n_product_0002/fourth_color/fourth_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/nike/n_product_0002/fourth_color/fourth_color_main.png',
@@ -120,6 +130,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'fifth_color',
+      name: 'Nike Dunk Low',
+      priceCents: 445400,
       mainImage: 'frontend/src/images/shoes/nike/n_product_0002/fifth_color/fifth_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/nike/n_product_0002/fifth_color/fifth_color_main.png',
@@ -155,6 +167,8 @@ export const popularProducts = [{
   colors: [
     {
       colorId: 'first_color',
+      name: 'Adidas Switch FWD 2',
+      priceCents: 850000,
       mainImage: 'frontend/src/images/shoes/adidas/a_product_0003/first_color/first_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/adidas/a_product_0003/first_color/first_color_main.png',
@@ -176,6 +190,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'second_color',
+      name: 'Adidas Switch FWD 2',
+      priceCents: 850000,
       mainImage: 'frontend/src/images/shoes/adidas/a_product_0003/second_color/second_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/adidas/a_product_0003/second_color/second_color_main.png',
@@ -198,6 +214,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'third_color',
+      name: 'Adidas Switch FWD',
+      priceCents: 850000,
       mainImage: 'frontend/src/images/shoes/adidas/a_product_0003/third_color/third_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/adidas/a_product_0003/third_color/third_color_main.png',
@@ -219,6 +237,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'fourth_color',
+      name: 'Adidas Switch FWD',
+      priceCents: 850000,
       mainImage: 'frontend/src/images/shoes/adidas/a_product_0003/fourth_color/fourth_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/adidas/a_product_0003/fourth_color/fourth_color_main.png',
@@ -241,6 +261,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'fifth_color',
+      name: 'Adidas Switch FWD 2',
+      priceCents: 850000,
       mainImage: 'frontend/src/images/shoes/adidas/a_product_0003/fifth_color/fifth_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/adidas/a_product_0003/fifth_color/fifth_color_main.png',
@@ -275,6 +297,8 @@ export const popularProducts = [{
   colors: [
     {
       colorId: 'first_color',
+      name: "Tatum 3 PF 'Welcome to the Garden'",
+      priceCents: 709500,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0004/first_color/first_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0004/first_color/first_color_main.png',
@@ -297,6 +321,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'second_color',
+      name: "Tatum 3 PF 'Zero Days Off'",
+      priceCents: 709500,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0004/second_color/second_color_main.jpg',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0004/second_color/second_color_main.jpg',
@@ -319,6 +345,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'third_color',
+      name: "Tatum 3 PF 'Zen'",
+      priceCents: 709500,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0004/third_color/third_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0004/third_color/third_color_main.png',
@@ -349,63 +377,75 @@ export const popularProducts = [{
   id: 'a_product_0005',
   logo: 'frontend/src/images/logos/adidas_logo.png',
   image: 'frontend/src/images/shoes/adidas/a_product_0005/adidas-racer-tr23.png',
-  name: 'Racer TR23 Shoes',
+  name: 'Adidas Racer TR23 Shoes',
   colors: [{
     colorId: 'first_color',
-    mainImage: 'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_main.png',
+    name: 'Adidas Racer TR23 Shoes',
+    priceCents: 380000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_main.png',
     otherImages: [
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_main.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img1.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img2.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img3.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img4.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img5.png'
+      'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/first_color/first_color_img5.png'
     ],
     sizes: [
       {size: '39', stock: 30},
-      {size: '40', stock: 23},
-      {size: '41', stock: 12},
-      {size: '42', stock: 14},
-      {size: '43', stock: 18},
-      {size: '44', stock: 11}
+      {size: '40', stock: 25},
+      {size: '41', stock: 18},
+      {size: '42', stock: 22},
+      {size: '43', stock: 12}
     ]
-  },{
+  }, {
     colorId: 'second_color',
-    mainImage: 'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_main.png',
+    name: 'Adidas Racer TR23 Shoes',
+    priceCents: 380000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_main.png',
     otherImages: [
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_main.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img1.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img2.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img3.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img4.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img5.png'
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img6.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/second_color/second_color_img7.png'
     ],
     sizes: [
-      {size: '39', stock: 30},
-      {size: '40', stock: 23},
-      {size: '41', stock: 12},
-      {size: '42', stock: 14},
-      {size: '43', stock: 18},
-      {size: '44', stock: 11}
+      {size: '39', stock: 18},
+      {size: '40', stock: 14},
+      {size: '41', stock: 22},
+      {size: '42', stock: 20},
+      {size: '43', stock: 12},
+      {size: '44', stock: 18},
+      {size: '45', stock: 10}
     ]
-  },{
+  }, {
     colorId: 'third_color',
-    mainImage: 'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_main.png',
+    name: 'Adidas Racer TR23 Shoes',
+    priceCents: 380000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_main.png',
     otherImages: [
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_main.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img1.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img2.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img3.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img4.png',
-      'frontend/src/images/shoes/adidas/a_product_0005/a_product_0005_img5.png'
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img6.png',
+      'frontend/src/images/shoes/adidas/a_product_0005/third_color/third_color_img7.png'
     ],
     sizes: [
-      {size: '39', stock: 30},
-      {size: '40', stock: 23},
-      {size: '41', stock: 12},
-      {size: '42', stock: 14},
-      {size: '43', stock: 18},
-      {size: '44', stock: 11}
+      {size: '39', stock: 20},
+      {size: '40', stock: 15},
+      {size: '41', stock: 17},
+      {size: '42', stock: 19},
+      {size: '43', stock: 13},
+      {size: '44', stock: 22},
+      {size: '45', stock: 10},
+      {size: '46', stock: 8}
     ]
   }],
   rating: {
@@ -420,66 +460,95 @@ export const popularProducts = [{
   name: "Air Jordan 4 Retro SE 'Wet Cement'",
   colors: [{
     colorId: 'first_color',
-    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_main.jpg',
+    name: "Air Jordan 4 Retro SE 'Wet Cement'",
+    priceCents: 1192500,
+    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_main.jpg',
     otherImages: [
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_main.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img1.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img2.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img3.png',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img4.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img5.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img6.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img7.jpg'
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_main.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img1.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img2.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img3.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img4.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img5.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img6.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/first_color/first_color_img7.jpg'
     ],
     sizes: [
-      {size: '39', stock: 15},
-      {size: '40', stock: 5},
-      {size: '41', stock: 5},
-      {size: '42', stock: 3},
-      {size: '43', stock: 9},
-      {size: '44', stock: 12}
+      {size: '39', stock: 10},
+      {size: '40', stock: 8},
+      {size: '41', stock: 9},
+      {size: '42', stock: 12},
+      {size: '43', stock: 7},
+      {size: '44', stock: 11},
+      {size: '45', stock: 13}
     ]
-  },{
+  }, {
     colorId: 'second_color',
-    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_main.jpg',
+    name: "Air Jordan 4 Retro 'Fear'",
+    priceCents: 1139500,
+    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_main.jpg',
     otherImages: [
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_main.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img1.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img2.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img3.png',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img4.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img5.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img6.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img7.jpg'
+      'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_main.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_img1.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_img2.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_img3.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_img4.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/second_color/second_color_img5.jpg'
     ],
     sizes: [
-      {size: '39', stock: 15},
+      {size: '39', stock: 6},
       {size: '40', stock: 5},
-      {size: '41', stock: 5},
-      {size: '42', stock: 3},
-      {size: '43', stock: 9},
-      {size: '44', stock: 12}
+      {size: '41', stock: 12},
+      {size: '42', stock: 9},
+      {size: '43', stock: 7},
+      {size: '44', stock: 10}
     ]
-  },{
+  }, {
     colorId: 'third_color',
-    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_main.jpg',
+    name: "Air Jordan 4 Retro 'Industrial Blue'",
+    priceCents: 1139500,
+    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_main.jpg',
     otherImages: [
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_main.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img1.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img2.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img3.png',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img4.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img5.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img6.jpg',
-      'frontend/src/images/shoes/jordan/j_product_0006/j_product_0006_img7.jpg'
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_main.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img1.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img2.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img3.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img4.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img5.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img6.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/third_color/third_color_img7.png'
     ],
     sizes: [
-      {size: '39', stock: 15},
-      {size: '40', stock: 5},
-      {size: '41', stock: 5},
-      {size: '42', stock: 3},
-      {size: '43', stock: 9},
-      {size: '44', stock: 12}
+      {size: '40', stock: 8},
+      {size: '41', stock: 10},
+      {size: '42', stock: 11},
+      {size: '43', stock: 12},
+      {size: '44', stock: 7}
+    ]
+  }, {
+    colorId: 'fourth_color',
+    name: "Air Jordan 4 Retro 'Oxidized Green'",
+    priceCents: 1262500,
+    mainImage: 'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_main.jpg',
+    otherImages: [
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_main.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img1.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img2.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img3.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img4.jpg',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img5.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img6.png',
+      'frontend/src/images/shoes/jordan/j_product_0006/fourth_color/fourth_color_img7.jpg'
+    ],
+    sizes: [
+      {size: '39', stock: 7},
+      {size: '40', stock: 12},
+      {size: '41', stock: 10},
+      {size: '42', stock: 6},
+      {size: '43', stock: 8},
+      {size: '44', stock: 11},
+      {size: '45', stock: 13},
+      {size: '46', stock: 5}
     ]
   }],
   rating: {
@@ -495,6 +564,8 @@ export const popularProducts = [{
   colors: [
     {
       colorId: 'first_color',
+      name: 'Jordan Spizike Low',
+      priceCents: 609500,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0007/first_color/first_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0007/first_color/first_color_main.png',
@@ -519,6 +590,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'second_color',
+      name: 'Jordan Spizike Low',
+      priceCents: 889500,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0007/second_color/second_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0007/second_color/second_color_main.png',
@@ -540,6 +613,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'third_color',
+      name: 'Jordan Spizike Low',
+      priceCents: 889500,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0007/third_color/third_color_main.jpg',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0007/third_color/third_color_main.jpg',
@@ -562,6 +637,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'fourth_color',
+      name: 'Jordan Spizike Low',
+      priceCents: 711900,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0007/fourth_color/fourth_color_main.jpg',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0007/fourth_color/fourth_color_main.jpg',
@@ -585,6 +662,8 @@ export const popularProducts = [{
     },
     {
       colorId: 'fifth_color',
+      name: 'Jordan Spizike Low',
+      priceCents: 622900,
       mainImage: 'frontend/src/images/shoes/jordan/j_product_0007/fifth_color/fifth_color_main.png',
       otherImages: [
         'frontend/src/images/shoes/jordan/j_product_0007/fifth_color/fifth_color_main.png',
@@ -616,79 +695,117 @@ export const popularProducts = [{
   id: 'a_product_0008',
   logo: 'frontend/src/images/logos/adidas_logo.png',
   image: 'frontend/src/images/shoes/adidas/a_product_0008/adidas-ultra-boost.png',
-  name: 'UltraBoost 1.0 Shoes',
+  name: 'Adidas UltraBoost 1.0 Shoes',
   colors: [{
     colorId: 'first_color',
-    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_main.png',
+    name: 'Adidas UltraBoost 1.0 Shoes',
+    priceCents: 1000000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_main.png',
     otherImages: [
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_main.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img1.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img2.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img3.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img4.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img5.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img6.jpg',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/first_color/first_color_img6.jpg',
     ],
     sizes: [
       {size: '37', stock: 30},
       {size: '38', stock: 25},
-      {size: '39', stock: 20},
-      {size: '40', stock: 15},
-      {size: '41', stock: 10},
-      {size: '42', stock: 12},
-      {size: '43', stock: 18},
-      {size: '44', stock: 25},
-      {size: '45', stock: 13},
-      {size: '46', stock: 11}
-    ],
+      {size: '40', stock: 15},  
+      {size: '42', stock: 10},  
+      {size: '44', stock: 12},  
+    ], 
   },{
     colorId: 'second_color',
-    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_main.png',
+    name: 'Adidas UltraBoost 1.0 Shoes',
+    priceCents: 950000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_main.png',
     otherImages: [
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_main.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img1.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img2.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img3.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img4.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img5.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img6.jpg',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/second_color/second_color_img6.png',
     ],
     sizes: [
       {size: '37', stock: 30},
-      {size: '38', stock: 25},
-      {size: '39', stock: 20},
-      {size: '40', stock: 15},
-      {size: '41', stock: 10},
-      {size: '42', stock: 12},
-      {size: '43', stock: 18},
-      {size: '44', stock: 25},
-      {size: '45', stock: 13},
-      {size: '46', stock: 11}
+      {size: '39', stock: 25},
+      {size: '41', stock: 20},  
+      {size: '43', stock: 18},  
+      {size: '44', stock: 25},  
+      {size: '45', stock: 13},  
     ],
   },{
     colorId: 'third_color',
-    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_main.png',
+    name: 'Adidas UltraBoost 1.0 Shoes',
+    priceCents: 1000000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_main.png',
     otherImages: [
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_main.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img1.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img2.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img3.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img4.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img5.png',
-      'frontend/src/images/shoes/adidas/a_product_0008/a_product_0008_img6.jpg',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img6.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/third_color/third_color_img7.png'
+    ],
+    sizes: [
+      {size: '38', stock: 20},  
+      {size: '39', stock: 18}, 
+      {size: '41', stock: 25},  
+      {size: '43', stock: 15},  
+      {size: '45', stock: 30},  
+    ], 
+  },{
+    colorId: 'fourth_color',
+    name: 'Adidas UltraBoost 1.0 Shoes',
+    priceCents: 1000000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img6.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fourth_color/fourth_color_img7.png'
+    ],
+    sizes: [
+      {size: '38', stock: 30},
+      {size: '39', stock: 22},
+      {size: '41', stock: 18}, 
+      {size: '43', stock: 15}, 
+      {size: '45', stock: 10}, 
+    ], 
+  },{
+    colorId: 'fifth_color',
+    name: 'Adidas UltraBoost 1.0 Shoes',
+    priceCents: 1000000,
+    mainImage: 'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_main.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_img1.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_img2.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_img3.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_img4.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_img5.png',
+      'frontend/src/images/shoes/adidas/a_product_0008/fifth_color/fifth_color_img6.png'
     ],
     sizes: [
       {size: '37', stock: 30},
-      {size: '38', stock: 25},
-      {size: '39', stock: 20},
+      {size: '39', stock: 25},
       {size: '40', stock: 15},
-      {size: '41', stock: 10},
       {size: '42', stock: 12},
-      {size: '43', stock: 18},
-      {size: '44', stock: 25},
-      {size: '45', stock: 13},
-      {size: '46', stock: 11}
-    ],
+      {size: '43', stock: 18}, 
+      {size: '45', stock: 11},  
+      {size: '46', stock: 13},
+    ], 
   }],
   rating: {
     stars: 4,

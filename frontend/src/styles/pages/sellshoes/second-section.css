@@ -259,6 +259,7 @@ label {
   margin-bottom: 5px;
   border: 1px solid slateblue;
   cursor: pointer;
+  background-color: #c0c0c0;
   transition: border-color 0.15s;
 }
 
@@ -281,6 +282,7 @@ label {
 .product-main-image{
   width: 450px;
   border-radius: 10px;
+  background-color: #c0c0c0;
   height: 563px;
   border: 1px solid slateblue;
 }
