@@ -309,7 +309,7 @@ function addToCart(productId, quantityValue) {
   let matchingItem;
 
   productCart.forEach((cartItem) => {
-    if(productId === cartItem.productId && selectedSizeText === cartItem.size && currentColorId === cartItem.color) {
+    if(productId === cartItem.productId && selectedSizeText === cartItem.size && currentColorId === cartItem.colorId) {
       matchingItem = cartItem;
     }
   });
@@ -321,7 +321,7 @@ function addToCart(productId, quantityValue) {
       productId: productId,
       quantity: quantityValue,
       size: selectedSizeText,
-      color: currentColorId
+      colorId: currentColorId
     });
   }
   saveToStorage();

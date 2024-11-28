@@ -9,7 +9,7 @@ export function updateCartSummaryItem() {
   // Generate cart summary HTML
   productCart.forEach((cartItem) => {
     const productId = cartItem.productId;
-    const selectedColorId = cartItem.color;
+    const selectedColorId = cartItem.colorId;
     const matchedColorId = matchingColorId(productId, selectedColorId);
     const matchedId = matchingProductId(productId);
     const priceCents = formatPesoMoney(matchedColorId.priceCents);

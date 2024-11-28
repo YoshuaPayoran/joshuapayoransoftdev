@@ -1,5 +1,5 @@
 import { productCart } from "../data/product-cart.js";
-import { matchingProductId } from "../utils/matched-id.js";
+import { matchingColorId } from "../utils/matched-id.js";
 import { formatPesoMoney } from "../utils/money.js";
 import { deliveryOptions } from "../data/delivery-options.js";
 import { voucherCode } from "../data/voucher-code.js";
@@ -10,7 +10,7 @@ export function renderPaymentSummary() {
   let productPriceCents = 0;
 
   productCart.forEach((cartItem) => {
-    const productItem = matchingProductId(cartItem.productId);
+    const productItem = matchingColorId(cartItem.productId, cartItem.colorId);
     productPriceCents += productItem.priceCents * cartItem.quantity;
   });
 
