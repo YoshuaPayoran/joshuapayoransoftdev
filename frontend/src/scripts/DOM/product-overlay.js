@@ -18,20 +18,8 @@ const closeOverylayBtn = document.querySelector('.close-product-overlay');
 const closeProductOverlay = document.getElementById('product-overlay');
 
 closeOverylayBtn.addEventListener('click', () => {
-  // Reset color to the default
   currentColorId = 'first_color';
-  
-  // Reset selected size
-  selectedSizeText = null;
-  document.querySelectorAll('.js-product-size').forEach(size => size.classList.remove('selected-size'));
 
-  // Reset quantity input
-  const quantityInput = document.querySelector('.input-box');
-  if (quantityInput) {
-    quantityInput.value = 1;
-  }
-
-  // Hide overlay and allow scrolling
   closeProductOverlay.classList.remove('show-product-overlay');
   document.body.classList.remove('no-scroll');
 });
