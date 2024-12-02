@@ -14,8 +14,6 @@ export function updateCartSummaryItem() {
     const matchedId = matchingProductId(productId);
     const priceCents = formatPesoMoney(matchedColorId.priceCents);
 
-    console.log(matchedColorId);
-
     cartSummaryHTML += 
     `
       <div class="cart-item-container js-cart-item-container-${matchedId.id}-${matchedColorId.colorId}">

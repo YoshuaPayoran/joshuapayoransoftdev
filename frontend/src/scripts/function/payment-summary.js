@@ -23,12 +23,12 @@ export function renderPaymentSummary() {
     }
   });
 
-  let shippingPriceCents = 0;
-  deliveryOptions.forEach((deliveryOption) => {
-    if (deliveryOption.id === deliveryOptionId) {
-      shippingPriceCents = deliveryOption.priceCents;
-    }
-  });
+  let shippingPriceCents;
+  const deliveryOptionPrice = deliveryOptions.find(deliveryOption => 
+    deliveryOption.id === deliveryOptionId
+  );
+
+  shippingPriceCents = deliveryOptionPrice.priceCents;
 
   let totalBeforeTaxCents = productPriceCents; 
   if (voucherCodeDiscount) {
@@ -65,7 +65,9 @@ export function voucherDiscount() {
     let totalPriceCents = totalBeforeTaxCents + taxCents;
 
     const voucherCodeInput = document.getElementById('voucher-code').value;
-    const matchedVoucher = voucherCode.find(discountCode => discountCode.code === voucherCodeInput);
+    const matchedVoucher = voucherCode.find(discountCode => 
+      discountCode.code === voucherCodeInput
+    );
 
     if (matchedVoucher) {
       voucherCodeDiscount = matchedVoucher.discount;
@@ -86,11 +88,8 @@ export function voucherDiscount() {
 }
 
 export function updatePaymentShippingOption(selectedShippingOption) {
-  let shippingOption;
-  deliveryOptions.forEach((deliveryOption) => {
-    if (deliveryOption.id === selectedShippingOption) {
-      shippingOption = deliveryOption;
-    }
-  });
+  const shippingOption = deliveryOptions.find(deliveryOption =>
+      deliveryOption.id === selectedShippingOption
+  );
   return shippingOption;
 }

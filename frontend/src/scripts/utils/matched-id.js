@@ -1,27 +1,21 @@
 import { popularProducts } from "../data/popular-products.js";
 
 export function matchingProductId (productId) {
-  let matchedId;
-  popularProducts.forEach((product) => {
-    if(product.id === productId){
-      matchedId = product;
-    }
-  });
+  
+  const matchedId = popularProducts.find(product => 
+    product.id === productId
+  );
+
   return matchedId;
 }
 
 export function matchingColorId (productId, selectedColorId){
-  let matchedColorId;
 
-  popularProducts.forEach((product) => {
-    if(product.id === productId) {
-      product.colors.forEach((color) => {
-        if(color.colorId === selectedColorId){
-          matchedColorId = color;
-        }
-      });
-    }
-  });
+  const matchingId = matchingProductId(productId);
   
+  const matchedColorId = matchingId.colors.find(color => 
+    color.colorId === selectedColorId
+  );
+
   return matchedColorId;
 }

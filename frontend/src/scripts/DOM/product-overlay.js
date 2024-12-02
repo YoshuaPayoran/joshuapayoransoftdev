@@ -45,9 +45,8 @@ function viewProductOverlay(productId) {
 function generateProductDetails(matchedId) {
   const priceCents = formatPesoMoney(matchedId.priceCents);
   const selectedColorId = viewOtherColors (matchedId);
-  let productDetailsHTML = '';
 
-  productDetailsHTML +=`
+  const productDetailsHTML = `
     <div class="product-detail-left">
       <div class="product-angle-images">
         ${otherViewImages(selectedColorId)}
@@ -148,14 +147,18 @@ function otherProductColor(matchedId) {
 let currentColorId = 'first_color';
 
 function viewOtherColors(matchedId) {
-  let selectedColorId = matchedId.colors.find(color => color.colorId === currentColorId);
+  let selectedColorId = matchedId.colors.find(color => 
+    color.colorId === currentColorId
+  );
 
   const selectedColors = document.querySelectorAll('.js-other-color');
 
   selectedColors.forEach((color) => {
     color.addEventListener('click', (event) => {
       currentColorId = event.target.dataset.colorId;
-      selectedColorId = matchedId.colors.find(color => color.colorId === currentColorId);
+      selectedColorId = matchedId.colors.find(color => 
+        color.colorId === currentColorId
+      );
 
       document.querySelector('.product-main-image').src = selectedColorId.mainImage;
 
@@ -224,7 +227,6 @@ function productStars(matchedId) {
 function updateStockAndSizeInfo(selectedColorId) {
   const sizeStock = document.querySelector('.js-product-stock');
   const setMaxValue = document.querySelector('.input-box');
-  let matchedSize;
 
   const availableStock = productTotalStock(selectedColorId);
   sizeStock.textContent = `Stock: ${availableStock}`;
@@ -294,13 +296,12 @@ function selectedProductSize(selectedColorId) {
 }
 
 function addToCart(productId, quantityValue) {
-  let matchingItem;
 
-  productCart.forEach((cartItem) => {
-    if(productId === cartItem.productId && selectedSizeText === cartItem.size && currentColorId === cartItem.colorId) {
-      matchingItem = cartItem;
-    }
-  });
+  const matchingItem = productCart.find(cartItem => 
+    productId === cartItem.productId && 
+    selectedSizeText === cartItem.size && 
+    currentColorId === cartItem.colorId
+  );
 
   if(matchingItem) {
     matchingItem.quantity += 1;

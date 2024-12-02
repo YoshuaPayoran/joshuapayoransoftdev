@@ -1,17 +1,21 @@
-export function creditCardPattern () {
-  document.getElementById('creditCard-number-default').addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, ''); 
-    e.target.value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+export function creditCardPattern() {
+  // Format the credit card number input
+  const creditCardNumberInput = document.getElementById('creditCard-number-default');
+  creditCardNumberInput?.addEventListener('input', (e) => {
+    const value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+    e.target.value = value.replace(/(\d{4})(?=\d)/g, '$1 '); // Add space after every 4 digits
   });
 
-  document.getElementById('creditCard-cvv-default').addEventListener('input', function (e) {
-    e.target.value = e.target.value.replace(/\D/g, ''); // Removes any non-digit character
+  // Restrict CVV input to digits only
+  const creditCardCVVInput = document.getElementById('creditCard-cvv-default');
+  creditCardCVVInput?.addEventListener('input', (e) => {
+    e.target.value = e.target.value.replace(/\D/g, ''); // Remove non-digits
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
+  // Populate expiry year dropdown
+  const yearDropdown = document.getElementById('creditCard-expiry-year');
+  if (yearDropdown) {
     const currentYear = new Date().getFullYear();
-    const yearDropdown = document.getElementById('creditCard-expiry-year');
-
     for (let i = 0; i <= 10; i++) {
       const year = currentYear + i;
       const option = document.createElement('option');
@@ -19,5 +23,5 @@ export function creditCardPattern () {
       option.textContent = year;
       yearDropdown.appendChild(option);
     }
-  });
-}
+  }
+  }
