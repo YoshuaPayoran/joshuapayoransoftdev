@@ -1,5 +1,5 @@
 import { quantityManager, getCurrentQuantity } from "../function/quantity-manager.js";
-import { matchingProductId } from '../utils/matched-id.js';
+import { matchingProductId, matchingColorId } from '../utils/matched-id.js';
 import { activeState } from "../animation/active-effect.js";
 import { productCart, saveToStorage } from '../data/product-cart.js';
 import { formatPesoMoney } from '../utils/money.js';
@@ -9,7 +9,8 @@ export function productCartOverlay () {
   document.querySelectorAll('.js-product-card').forEach((card) => {
     card.addEventListener('click', () => {
       const productId = card.dataset.productId;
-      viewProductOverlay(productId);
+      const productColorId = card.dataset.productColor;
+      viewProductOverlay(productId, productColorId);
     })
   });
 }
@@ -24,9 +25,10 @@ closeOverylayBtn.addEventListener('click', () => {
   document.body.classList.remove('no-scroll');
 });
 
-function viewProductOverlay(productId) {
+function viewProductOverlay(productId, productColorId) {
   const matchedId = matchingProductId(productId);
-  const productDetails = generateProductDetails(matchedId);
+  const matchedColorId = matchingColorId(productId, productColorId);
+  const productDetails = generateProductDetails(matchedId, matchedColorId);
 
   const overlayProduct = document.querySelector('.product-details');
   overlayProduct.innerHTML = productDetails.productDetailsHTML;
@@ -42,8 +44,8 @@ function viewProductOverlay(productId) {
   selectSize(productDetails.selectedColorId);
 }
 
-function generateProductDetails(matchedId) {
-  const priceCents = formatPesoMoney(matchedId.priceCents);
+function generateProductDetails(matchedId, matchedColorId) {
+  const priceCents = formatPesoMoney(matchedColorId.priceCents);
   const selectedColorId = viewOtherColors (matchedId);
 
   const productDetailsHTML = `

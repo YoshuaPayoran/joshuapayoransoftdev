@@ -1,8 +1,8 @@
-import { popularProducts } from "../data/popular-products.js";
+import { products } from "../data/products.js";
 
 export function matchingProductId (productId) {
   
-  const matchedId = popularProducts.find(product => 
+  const matchedId = products.find(product => 
     product.id === productId
   );
 

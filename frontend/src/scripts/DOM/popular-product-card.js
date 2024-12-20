@@ -1,32 +1,35 @@
-import {popularProducts} from '../data/popular-products.js';
+import {popularProducts} from '../data/popularProducts.js';
 import { starRating } from '../utils/stars.js';
 import { formatPesoMoney } from '../utils/money.js';
+import { matchingProductId, matchingColorId } from '../utils/matched-id.js';
 import { productCartOverlay, updateCartQuantity } from './product-overlay.js';
 
 let popularProductsHTML = '';
 
-popularProducts.forEach((products, index) => {
-  const  productRating = starRating(products);
-  const priceCents = formatPesoMoney(products.priceCents);
+popularProducts.forEach((product, index) => {
+  const matchedId = matchingProductId(product.productId);
+  const matchedColorId = matchingColorId(product.productId, product.defaultColor);
+  const productRating = starRating(matchedId);
+  const priceCents = formatPesoMoney(matchedColorId.priceCents);
   const delay = index * 100;
 
   popularProductsHTML += 
     `
-      <div class="product-card js-product-card" data-product-id="${products.id}" data-aos="fade-up"
+      <div class="product-card js-product-card" data-product-id="${matchedId.id}" data-product-color="${product.defaultColor}" data-aos="fade-up"
       data-aos-delay="${delay}">
-        <img class="product-logo" src="${products.logo}" alt="product logo">
+        <img class="product-logo" src="${matchedId.logo}" alt="product logo">
         <div class="product-picture">
-            <img src="${products.image}">
+            <img src="${matchedColorId.image}">
         </div>
         <div class="product-info">
           <div>
-            <p class="product-name">${products.name}</p>
+            <p class="product-name">${matchedColorId.name}</p>
             <div class="rating-container">
               <div class="star-rating">
                 ${productRating.stars}
               </div>
               <div class="rating-count">
-                <p>(${products.rating.count})</p>
+                <p>(${matchedId.rating.count})</p>
               </div>
             </div>
             <p class="product-price">&#8369 ${priceCents}</p>
