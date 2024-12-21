@@ -43,7 +43,7 @@ saleProducts.forEach((product) => {
           ${product.productDes}
         </div>
 
-        <button class="see-more-button">
+        <button class="see-more-button" data-product-id="${product.productId}" data-color-id="${product.colorId}">
           See more &#8599
         </button>
       </div>

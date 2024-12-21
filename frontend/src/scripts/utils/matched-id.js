@@ -1,4 +1,5 @@
 import { products } from "../data/products.js";
+import { saleProducts } from "../data/saleProducts.js";
 
 export function matchingProductId (productId) {
   
@@ -18,4 +19,13 @@ export function matchingColorId (productId, selectedColorId){
   );
 
   return matchedColorId;
+}
+
+export function matchingSaleProduct (productId, productColorId) {
+  const matchingSaleProductId = saleProducts
+    .find(saleProduct => 
+      saleProduct.productId === productId && 
+      saleProduct.colorId === productColorId);
+
+  return matchingSaleProductId;
 }
