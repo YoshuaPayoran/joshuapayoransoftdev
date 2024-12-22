@@ -4,7 +4,6 @@ import { activeState } from "../animation/active-effect.js";
 import { productCart, saveToStorage } from '../data/product-cart.js';
 import { formatPesoMoney } from '../utils/money.js';
 import { starRating } from '../utils/stars.js';
-import { saleProducts } from "../data/saleProducts.js";
 
 export function productCartOverlay () {
   document.querySelectorAll('.js-product-card').forEach((card) => {
@@ -157,7 +156,11 @@ function saleProductPriceHTML (saleProduct, matchedColorId){
     </s>
     <span>
       &#8369 ${formatPesoMoney(discountedPriceCents)}
-    </span>`
+    </span>
+    <span style="color: #007d48">
+      ${saleProduct.saleOff}% OFF 
+    </span>
+    `
   }else {
     salePriceHTML = `
     &#8369 ${formatPesoMoney(matchedColorId.priceCents)}
@@ -241,7 +244,11 @@ function updateNameAndPrice(selectedColorId, matchingSaleProducts) {
     </s>
     <span>
       &#8369 ${formatPesoMoney(discountedPriceCents)}
-    </span>`
+    </span>
+    <span style="color: #007d48">
+      ${matchingSaleProducts.saleOff}% OFF 
+    </span>
+    `
   }else {
     selectedColorName.textContent = selectedColorId.name;
     selectedColorPrice.innerHTML = `&#8369 ${productPrice}`;

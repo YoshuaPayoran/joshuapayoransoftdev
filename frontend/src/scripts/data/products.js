@@ -709,7 +709,7 @@ export const products = [{
     colorId: 'second_color',
     name: 'Adidas UltraBoost 1.0 Shoes',
     priceCents: 950000,
-    image: 'frontend/src/images/shoes/adidas/a_product_0003/adidas-ultra-boost.png',
+    image: 'frontend/src/images/shoes/adidas/a_product_0003/second_color/second_color_sale.png',
     mainImage: 'frontend/src/images/shoes/adidas/a_product_0003/second_color/second_color_main.png',
     otherImages: [
       'frontend/src/images/shoes/adidas/a_product_0003/second_color/second_color_main.png',
