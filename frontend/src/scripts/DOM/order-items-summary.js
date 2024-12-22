@@ -1,5 +1,5 @@
 import { productCart, removeFromCart } from "../data/product-cart.js";
-import { matchingColorId, matchingProductId } from "../utils/matched-id.js";
+import { matchingColorId, matchingProductId, matchingSaleProduct } from "../utils/matched-id.js";
 import { formatPesoMoney } from "../utils/money.js";
 import { renderPaymentSummary } from "../function/payment-summary.js";
 
@@ -12,7 +12,6 @@ export function updateCartSummaryItem() {
     const selectedColorId = cartItem.colorId;
     const matchedColorId = matchingColorId(productId, selectedColorId);
     const matchedId = matchingProductId(productId);
-    const priceCents = formatPesoMoney(matchedColorId.priceCents);
 
     cartSummaryHTML += 
     `
@@ -26,7 +25,7 @@ export function updateCartSummaryItem() {
               ${matchedColorId.name}
             </div>
             <div class="item-price">
-              &#8369; ${priceCents}
+              ${saleProductPrice(productId, matchedColorId)}
             </div>
             <div class="item-size">
               Size: ${cartItem.size}
@@ -73,4 +72,35 @@ export function updateCartSummaryItem() {
       renderPaymentSummary();
     });
   });
+}
+
+function saleProductPrice(productId, matchedColorId) {
+  const matchedSaleProduct = matchingSaleProduct(productId, matchedColorId.colorId);
+  let cartItemPrice = '';
+  if(matchedSaleProduct){
+    const saleOffPrice = matchedSaleProduct.saleOff / 100;
+    const productOffPrice = matchedColorId.priceCents * saleOffPrice;
+    const discountedPriceCents = matchedColorId.priceCents - productOffPrice;
+    cartItemPrice = `
+      <div>
+        <s style="color: gray">
+          &#8369 ${formatPesoMoney(matchedColorId.priceCents)}
+        </s>
+        <span>
+          &#8369 ${formatPesoMoney(discountedPriceCents)}
+        </span>
+      </div>
+      <div>
+        <span style="color: #007d48">
+          ${matchedSaleProduct.saleOff}% OFF 
+        </span>
+      </div>
+    `
+  }else {
+    cartItemPrice = `
+      &#8369 ${formatPesoMoney(matchedColorId.priceCents)}
+    `
+  }
+
+  return cartItemPrice;
 }

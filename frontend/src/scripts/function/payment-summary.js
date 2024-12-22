@@ -1,5 +1,5 @@
 import { productCart } from "../data/product-cart.js";
-import { matchingColorId } from "../utils/matched-id.js";
+import { matchingColorId, matchingSaleProduct } from "../utils/matched-id.js";
 import { formatPesoMoney } from "../utils/money.js";
 import { deliveryOptions } from "../data/delivery-options.js";
 import { voucherCode } from "../data/voucher-code.js";
@@ -11,7 +11,7 @@ export function renderPaymentSummary() {
 
   productCart.forEach((cartItem) => {
     const productItem = matchingColorId(cartItem.productId, cartItem.colorId);
-    productPriceCents += productItem.priceCents * cartItem.quantity;
+    productPriceCents += saleProductPrice(productItem, cartItem);
   });
 
   document.querySelector('.js-items-total-price').innerHTML = `&#8369; ${formatPesoMoney(productPriceCents)}`;
@@ -45,6 +45,21 @@ export function renderPaymentSummary() {
   document.querySelector('.js-total-price').innerHTML = `&#8369; ${formatPesoMoney(totalPriceCents)}`;
 }
 
+function saleProductPrice(productItem, cartItem) {
+  productItem.priceCents * cartItem.quantity;
+  const matchedSaleProduct = matchingSaleProduct(cartItem.productId, cartItem.colorId);
+  let totalDiscountedPrice = 0;
+  if(matchedSaleProduct) {
+    const salePriceCents =  matchedSaleProduct.saleOff / 100;
+    const productOffPrice = productItem.priceCents * salePriceCents;
+    const discountedPriceCents = productItem.priceCents - productOffPrice;
+    totalDiscountedPrice = discountedPriceCents * cartItem.quantity;
+  }else {
+    totalDiscountedPrice = productItem.priceCents * cartItem.quantity;
+  }
+
+  return totalDiscountedPrice;
+}
 
 export function voucherDiscount() {
   document.getElementById('sumbit-voucher-code').addEventListener('click', function() {
