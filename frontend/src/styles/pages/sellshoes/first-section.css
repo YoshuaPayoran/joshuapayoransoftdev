@@ -115,7 +115,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-.star-rating {
+.star-rating,
+.rating-container {
   font-size: 15px;
   color: rgb(220, 220, 220);
 }

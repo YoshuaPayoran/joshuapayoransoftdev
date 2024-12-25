@@ -1,6 +1,8 @@
 import {popularProducts} from '../data/popularProducts.js';
 import { starRating } from '../utils/stars.js';
 import { formatPesoMoney } from '../utils/money.js';
+import '../animation/carousel.js';
+import '../DOM/brand-products.js';
 import { matchingProductId, matchingColorId } from '../utils/matched-id.js';
 import { productCartOverlay, updateCartQuantity } from './product-overlay.js';
 
