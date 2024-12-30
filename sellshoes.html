@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="frontend/src/styles/pages/sellshoes/carousel-section.css">
   <link rel="stylesheet" href="frontend/src/styles/shared/product-overlay.css">
   <link rel="stylesheet" href="frontend/src/styles/pages/sellshoes/shop-section.css">
+  <link rel="stylesheet" href="frontend/src/styles/pages/sellshoes/feedback-section.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>SellShoes.com</title>
   <link rel="icon" type="image/x-icon" href="frontend/src/images/logos/logo.png">
@@ -36,7 +37,7 @@
           <li><a href="#home">HOME</a></li>
           <li><a href="#products">PRODUCTS</a></li>
           <li><a href="#shop">SHOP</a></li>
-          <li><a href="#">REVIEW</a></li>
+          <li><a href="#review">REVIEW</a></li>
           <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
@@ -207,6 +208,141 @@
               Show More
             </div>
           </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="review" class="review-section">
+      <div class="review-inner-container">
+        <div class="feedback-header-nav">
+          <div class="review-left-header">
+            <div class="review-header-text">
+              Reviews
+            </div>
+            <div class="total-reviews">
+              23
+            </div>
+          </div>
+          <div class="review-right-header">
+            <div class="review-button-container">
+              <button class="write-review-button">
+                Write a review
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="review-navbar">
+          <div class="review-inner-navbar">
+            <div class="review-search-bar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><g fill="none" stroke="rgba(100, 100, 100, 0.856)"><circle cx="11" cy="11" r="6"/><path stroke-linecap="round" d="m20 20l-3-3"/></g></svg>
+              <input class="review-search-input" type="search" placeholder="Search reviews">
+            </div>
+            <div class="dropdowns-container">
+              <div class="most-recent-review">
+                <select name="review-option" id="feedback-review-option">
+                  <option value="all-reviews">All reviews</option>
+                  <option value="most-recent">Most recent</option>
+                  <option value="highest">Highest rating</option>
+                  <option value="lowest">Lowest rating</option>
+                </select>
+              </div>
+              <div class="all-rating-reviews">
+                <select name="review-stars" id="feedback-review-star">
+                  <option value="all-rating">All rating</option>
+                  <option value="five-stars">Five stars</option>
+                  <option value="four-stars">Four stars</option>
+                  <option value="three-stars">Three stars</option>
+                  <option value="two-stars">Two stars</option>
+                  <option value="one-star">One star</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="customer-feedback-container">
+          <div class="customer-feedback-card">
+            <div class="customer-avatar">
+              <img class="customer-picture" src="frontend/src/images/customers/customer-profile.jpg" alt="">
+            </div>
+            <div class="feedback-details">
+              <div class="feedback-title-details">
+                <div class="customer-detail-container">
+                  <div class="customer-name">
+                    William Miller
+                  </div>
+                  <div class="feedback-date">
+                    December 31, 2024
+                  </div>
+                </div>
+                <div class="feedback-star-container">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="feedback-content">
+                Amazing service and fast delivery! My Nike sneakers fit perfectly and are super comfortable. Will definitely shop here again!
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-feedback-card">
+            <div class="customer-avatar">
+              <img class="customer-picture" src="frontend/src/images/customers/customer-profile.jpg" alt="">
+            </div>
+            <div class="feedback-details">
+              <div class="feedback-title-details">
+                <div class="customer-detail-container">
+                  <div class="customer-name">
+                    William Miller
+                  </div>
+                  <div class="feedback-date">
+                    December 31, 2024
+                  </div>
+                </div>
+                <div class="feedback-star-container">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="feedback-content">
+                Amazing service and fast delivery! My Nike sneakers fit perfectly and are super comfortable. Will definitely shop here again!
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-feedback-card">
+            <div class="customer-avatar">
+              <img class="customer-picture" src="frontend/src/images/customers/customer-profile.jpg" alt="">
+            </div>
+            <div class="feedback-details">
+              <div class="feedback-title-details">
+                <div class="customer-detail-container">
+                  <div class="customer-name">
+                    William Miller
+                  </div>
+                  <div class="feedback-date">
+                    December 31, 2024
+                  </div>
+                </div>
+                <div class="feedback-star-container">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="feedback-content">
+                Amazing service and fast delivery! My Nike sneakers fit perfectly and are super comfortable. Will definitely shop here again!
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

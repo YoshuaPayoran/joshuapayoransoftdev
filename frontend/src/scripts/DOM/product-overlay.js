@@ -34,9 +34,10 @@ closeOverylayBtn.addEventListener('click', () => {
   document.body.classList.remove('no-scroll');
 });
 
-function viewProductOverlay(productId, productColorId) {
+export function viewProductOverlay(productId, productColorId) {
   const matchedId = matchingProductId(productId);
   const matchedColorId = matchingColorId(productId, productColorId);
+  defaultColor(productColorId);
   const productDetails = generateProductDetails(matchedId, matchedColorId);
 
   const overlayProduct = document.querySelector('.product-details');
@@ -173,9 +174,10 @@ function saleProductPriceHTML (saleProduct, matchedColorId){
 
 function otherProductColor(matchedId) {
   let otherColorHTML = '';
-  matchedId.colors.forEach((itemColor, index) => {
+  matchedId.colors.forEach((itemColor) => {
+    const activeColor = itemColor.colorId === currentColorId ? 'selected-color' : '';
     otherColorHTML += `
-      <img class="js-other-color ${index === 0 ? 'selected-color' : ''}" src="${itemColor.mainImage}" data-color-id="${itemColor.colorId}">
+      <img class="js-other-color ${activeColor}" src="${itemColor.mainImage}" data-color-id="${itemColor.colorId}">
     `;
   });
 
@@ -183,6 +185,10 @@ function otherProductColor(matchedId) {
 }
 
 let currentColorId = 'first_color';
+
+function defaultColor(colorId) {
+  currentColorId = colorId;
+}
 
 function viewOtherColors(matchedId) {
   let selectedColorId = matchedId.colors.find(color => 

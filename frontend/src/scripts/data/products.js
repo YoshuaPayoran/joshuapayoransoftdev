@@ -1185,4 +1185,128 @@ export const products = [{
     stars: 4.5,
     count: 78
   }
+}, {
+  id: 'p_product_0001',
+  logo: 'frontend/src/images/logos/puma_logo.png',
+  colors: [{
+    colorId: 'first_color',
+    name: 'RBD Game Low Sneakers',
+    priceCents: 450000,
+    image: 'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img.png',
+    mainImage: 'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_main.png',
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img1.png',
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img2.png',
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img3.png',
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img4.png',
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img5.png',
+      'frontend/src/images/shoes/puma/p_product_0001/first_color/first_color_img6.png'
+    ],
+    sizes: [
+      {size: '38', stock: 8},
+      {size: '39', stock: 10},
+      {size: '40', stock: 12},
+      {size: '41', stock: 14},
+      {size: '42', stock: 23},
+      {size: '43', stock: 12}
+    ]
+  }, {
+    colorId:'second_color',
+    name: 'RBD Game Low Sneakers',
+    priceCents: 450000,
+    image: 'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_img.png',
+    mainImage: 'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_main.png',
+      'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_img1.png',
+      'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_img2.png',
+      'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_img3.png',
+      'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_img4.png',
+      'frontend/src/images/shoes/puma/p_product_0001/second_color/second_color_img5.png',
+    ],
+    sizes: [
+      {size: '38', stock: 32},
+      {size: '39', stock: 14},
+      {size: '40', stock: 12},
+      {size: '41', stock: 14},
+      {size: '42', stock: 53},
+      {size: '43', stock: 23},
+      {size: '44', stock: 12}
+    ]
+  }, {
+    colorId: 'third_color',
+    name: 'RBD Game Low Sneakers',
+    priceCents: 450000,
+    image: 'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img.png',
+    mainImage: 'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_main.png',
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img1.png',
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img2.png',
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img3.png',
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img4.png',
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img5.png',
+      'frontend/src/images/shoes/puma/p_product_0001/third_color/third_color_img6.png'
+    ],
+    sizes: [
+      {size: '38', stock: 34},
+      {size: '39', stock: 20},
+      {size: '40', stock: 53},
+      {size: '41', stock: 64},
+      {size: '42', stock: 23},
+      {size: '43', stock: 12},
+      {size: '44', stock: 45}
+    ]
+  }, {
+    colorId: 'fourth_color',
+    name: 'RBD Game Low Sneakers',
+    priceCents: 450000,
+    image: 'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img.png',
+    mainImage: 'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_main.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img1.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img2.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img3.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img4.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img5.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img6.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fourth_color/fourth_color_img7.png'
+    ],
+    sizes: [
+      {size: '37', stock: 34},
+      {size: '38', stock: 60},
+      {size: '39', stock: 22},
+      {size: '40', stock: 34},
+      {size: '41', stock: 14}
+    ]
+  }, {
+    colorId: 'fifth_color',
+    name: 'RBD Game Low Sneakers',
+    priceCents: 450000,
+    image: 'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img.png',
+    mainImage: 'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_main.png',
+    otherImages: [
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_main.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img1.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img2.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img3.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img4.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img5.png',
+      'frontend/src/images/shoes/puma/p_product_0001/fifth_color/fifth_color_img6.png',
+    ],
+    sizes: [
+      {size: '38', stock: 30},
+      {size: '39', stock: 12},
+      {size: '40', stock: 21},
+      {size: '41', stock: 23},
+      {size: '42', stock: 12},
+      {size: '43', stock: 9}
+    ]
+  }],
+  rating: {
+    stars: 5,
+    count: 77
+  }
 }];

@@ -1,0 +1,175 @@
+#review {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.review-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.feedback-header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-block-end:  0.15rem solid rgba(75, 75, 75, 0.127);
+}
+
+.review-left-header{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.review-left-header .review-header-text {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.review-left-header .total-reviews {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ff523b;
+}
+
+.write-review-button {
+  border: none;
+  background-color: blueviolet;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+}
+
+.review-navbar {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.review-inner-navbar {
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  gap: 40px;
+  width: 100%;
+}
+
+.review-search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border-radius: 42px;
+  border: 0.15rem solid rgba(75, 75, 75, 0.127);
+  margin-right: 0px;
+}
+
+.review-search-input {
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(100, 100, 100, 0.856);
+  width: 100%;
+  margin-left: 12px;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+}
+
+.review-search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+.review-search-input::placeholder {
+  color: rgba(75, 75, 75, 0.39);
+}
+
+.dropdowns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 30px;
+}
+
+.most-recent-review,
+.all-rating-reviews {
+  width: 100%;
+}
+
+/* Style the select element */
+.most-recent-review select,
+.all-rating-reviews select {
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* For most browsers */
+  padding-right: 40px; /* Space for the custom arrow */
+  font-size: 1.5rem; /* Adjust the font size */
+  background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22rgba(80, 80, 80, 0.904)%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E'); /* Custom down arrow */
+  background-repeat: no-repeat;
+  background-position: right 20px center; /* Position the arrow to the right */
+  background-size: 35px; /* Make the arrow bigger */
+  width: 100%; /* Full width */
+  padding: 20px 30px; /* Adjust padding */
+  border: none;
+  background-color: rgba(182, 182, 182, 0.096);
+  border-radius: 42px;
+  color: rgba(80, 80, 80, 0.904);
+}
+
+/* Optional: Style the select element's focus state */
+select:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.customer-feedback-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.customer-feedback-card {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+
+.customer-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.feedback-title-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customer-name {
+  font-size: 1.2rem;
+}
+
+.feedback-date {
+  font-size: 0.9rem;
+  color: grey;
+}
+
+.feedback-star-container {
+  font-size: 1.2rem;
+  color: rgb(220, 220, 220);
+}
+
+.feedback-content {
+  margin-top: 8px;
+}

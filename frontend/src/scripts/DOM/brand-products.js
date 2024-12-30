@@ -3,6 +3,7 @@ import { converseProducts } from "../data/converse.js";
 import { nikeProducts } from "../data/nike.js";
 import { jordanProducts } from "../data/jordan.js";
 import { pumaProducts } from "../data/puma.js";
+import { viewProductOverlay } from "./product-overlay.js";
 import { matchingColorId, matchingProductId } from "../utils/matched-id.js";
 import { starRating } from "../utils/stars.js";
 import { formatPesoMoney } from "../utils/money.js";
@@ -106,3 +107,14 @@ function brandProductsHTML(brandId) {
 
   return productHTML;
 }
+
+// Add event delegation to the parent container of product cards
+document.querySelector('.js-shop-product-grid').addEventListener('click', (event) => {
+  const card = event.target.closest('.js-product-card'); // Check if a product card was clicked
+  if (card) {
+    const productId = card.dataset.productId;
+    const productColor = card.dataset.productColor;
+    viewProductOverlay(productId, productColor);
+    // Add your logic here, e.g., navigate to the product page or show a modal
+  }
+});

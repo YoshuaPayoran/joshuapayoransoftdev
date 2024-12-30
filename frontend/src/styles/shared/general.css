@@ -15,6 +15,10 @@ main {
   width: 100%;
 }
 
+body {
+  overflow-x: hidden; 
+}
+
 body img {
   user-select: none;
   -webkit-user-select: none;
