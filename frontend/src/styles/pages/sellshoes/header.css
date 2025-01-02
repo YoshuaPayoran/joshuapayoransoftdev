@@ -10,7 +10,7 @@ header {
   align-items: center; 
   z-index: 1000; 
   width: 100%;
-  transition: height 0.3s ease, width 0.5s ease, top 0.6s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  transition: height 0.3s ease, width 0.5s ease, top 0.6s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
 .header-shadow {
@@ -27,6 +27,9 @@ header {
   border-style: solid;
 }
 
+.header-hidden {
+  opacity: 0;
+}
 
 .header-container {
   display: flex;

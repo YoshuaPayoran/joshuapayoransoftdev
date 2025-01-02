@@ -116,7 +116,8 @@
 }
 
 .star-rating,
-.rating-container {
+.rating-container,
+.star-icon{
   font-size: 15px;
   color: rgb(220, 220, 220);
 }

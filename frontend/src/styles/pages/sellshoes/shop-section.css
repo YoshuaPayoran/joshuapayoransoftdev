@@ -4,10 +4,11 @@
   justify-content: center;
   position: relative;
   font-family: 'Poppins', sans-serif;
+  margin-top: 80px;
 }
 
 .shop-inner-container {
-  margin-top: 110px;
+  margin-top: 30px;
   width: 100%;
   max-width: 1500px;
   padding: 0 10px;

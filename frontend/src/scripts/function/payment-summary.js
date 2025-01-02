@@ -46,7 +46,6 @@ export function renderPaymentSummary() {
 }
 
 function saleProductPrice(productItem, cartItem) {
-  productItem.priceCents * cartItem.quantity;
   const matchedSaleProduct = matchingSaleProduct(cartItem.productId, cartItem.colorId);
   let totalDiscountedPrice = 0;
   if(matchedSaleProduct) {

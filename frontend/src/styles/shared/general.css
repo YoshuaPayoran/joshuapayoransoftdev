@@ -55,3 +55,7 @@ a {
 .active-flex {
   display: flex;
 }
+
+button {
+  cursor: pointer;
+}

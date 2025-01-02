@@ -74,3 +74,15 @@ export function starRating(products) {
 
   return matchingStar;
 }
+
+export function starCount(rating) {
+  let matchingStar;
+
+  productStars.forEach((productStar) => {
+    if (rating === productStar.starCount) {
+      matchingStar = productStar.stars;
+    }
+  });
+
+  return matchingStar;
+}

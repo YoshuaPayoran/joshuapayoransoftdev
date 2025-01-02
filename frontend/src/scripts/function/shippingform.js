@@ -26,7 +26,6 @@ export function getProvinceStatus(selectElements) {
     if (select.value === 'default' || select.value === '') {
       selectionError.classList.add('show-object');
       isEmpty = true;
-      return;
     } else {
       selectionError.classList.remove('show-object');
       province = select.options[select.selectedIndex].text;
