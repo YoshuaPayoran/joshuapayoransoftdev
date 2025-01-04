@@ -1,14 +1,15 @@
-import { saleProducts } from "../data/saleProducts.js";
-import { matchingColorId, matchingProductId } from "../utils/matched-id.js";
+import { saleFiveProducts } from "../data/saleProducts.js";
+import { matchingColorId, matchingProductId, matchingSaleProduct } from "../utils/matched-id.js";
 import { formatPesoMoney, salePrice } from "../utils/money.js";
 import { productStars } from "../utils/stars.js";
 
 let carouselProductsHTML = '';
 
-saleProducts.forEach((product) => {
+saleFiveProducts.forEach((product) => {
   const matchedColorId = matchingColorId(product.productId, product.colorId);
   const matchedId = matchingProductId(product.productId);
-  const discountedPrice = salePrice(product.saleOff, matchedColorId.priceCents);
+  const matchingSale = matchingSaleProduct (matchedId.id, matchedColorId.colorId);
+  const discountedPrice = salePrice(matchingSale.saleOff, matchedColorId.priceCents);
   const discountedPriceCents = formatPesoMoney(discountedPrice);
   const productStar = productStars.find(star => star.starCount === matchedId.rating.stars);
 
@@ -17,7 +18,7 @@ saleProducts.forEach((product) => {
       <img src="${matchedColorId.image}" alt="">
       <div class="item-intro">
         <div class="sale-offer-text">
-          SALE ${product.saleOff}%
+          SALE ${matchingSale.saleOff}%
         </div>
 
         <div class="carousel-item-name">

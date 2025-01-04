@@ -178,6 +178,9 @@
   font-weight: 500;
   color: blueviolet;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .product-stock {

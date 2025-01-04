@@ -2,7 +2,7 @@ import { quantityManager, getCurrentQuantity } from "../function/quantity-manage
 import { matchingProductId, matchingColorId, matchingSaleProduct} from '../utils/matched-id.js';
 import { activeState } from "../animation/active-effect.js";
 import { productCart, saveToStorage } from '../data/product-cart.js';
-import { formatPesoMoney } from '../utils/money.js';
+import { formatPesoMoney, salePrice } from '../utils/money.js';
 import { starRating } from '../utils/stars.js';
 
 export function productCartOverlay () {
@@ -145,22 +145,24 @@ function generateProductDetails(matchedId, matchedColorId) {
   return {selectedColorId, productDetailsHTML}
 }
 
-function saleProductPriceHTML (saleProduct, matchedColorId){
+export function saleProductPriceHTML (saleProduct, matchedColorId){
   let salePriceHTML = '';
   if(saleProduct){
-    const salePriceCents =  saleProduct.saleOff / 100;
-    const productOffPrice = matchedColorId.priceCents * salePriceCents;
-    const discountedPriceCents = matchedColorId.priceCents - productOffPrice;
+    const discountedPriceCents = salePrice(saleProduct.saleOff, matchedColorId.priceCents);
     salePriceHTML = `
-    <s style="color: gray">
-      &#8369 ${formatPesoMoney(matchedColorId.priceCents)}
-    </s>
-    <span>
-      &#8369 ${formatPesoMoney(discountedPriceCents)}
-    </span>
-    <span style="color: #007d48">
-      ${saleProduct.saleOff}% OFF 
-    </span>
+    <div>
+      <s style="color: gray">
+        &#8369 ${formatPesoMoney(matchedColorId.priceCents)}
+      </s>
+    </div>
+    <div>
+      <span>
+        &#8369 ${formatPesoMoney(discountedPriceCents)}
+      </span>
+      <span style="color: #007d48">
+        ${saleProduct.saleOff}% OFF 
+      </span>
+    </div>
     `
   }else {
     salePriceHTML = `

@@ -1,20 +1,20 @@
 import {popularProducts} from '../data/popularProducts.js';
 import { starRating } from '../utils/stars.js';
-import { formatPesoMoney } from '../utils/money.js';
+import { formatPesoMoney, salePrice } from '../utils/money.js';
 import '../animation/carousel.js';
 import '../DOM/brand-products.js';
 import '../DOM/customer-review.js';
 import '../function/contact.js';
-import { matchingProductId, matchingColorId } from '../utils/matched-id.js';
-import { productCartOverlay, updateCartQuantity } from './product-overlay.js';
+import { matchingProductId, matchingColorId, matchingSaleProduct } from '../utils/matched-id.js';
+import { productCartOverlay, updateCartQuantity, saleProductPriceHTML } from './product-overlay.js';
 
 let popularProductsHTML = '';
 
 popularProducts.forEach((product, index) => {
   const matchedId = matchingProductId(product.productId);
   const matchedColorId = matchingColorId(product.productId, product.defaultColor);
+  const matchingSale = matchingSaleProduct (matchedId.id, matchedColorId.colorId);
   const productRating = starRating(matchedId);
-  const priceCents = formatPesoMoney(matchedColorId.priceCents);
   const delay = index * 100;
 
   popularProductsHTML += 
@@ -36,7 +36,9 @@ popularProducts.forEach((product, index) => {
                 <p>(${matchedId.rating.count})</p>
               </div>
             </div>
-            <p class="product-price">&#8369 ${priceCents}</p>
+            <div class="product-price">
+              ${saleProductPriceHTML(matchingSale, matchedColorId)}
+            </div>
           </div>
           <div class="add-to-cart">
             <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24">
