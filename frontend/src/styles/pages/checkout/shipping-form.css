@@ -578,3 +578,7 @@ input[type="number"] {
   border: 1px solid red;
   background-color: rgb(253, 238, 241);
 }
+
+input {
+  outline: none;
+}

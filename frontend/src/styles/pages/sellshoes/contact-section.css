@@ -127,12 +127,14 @@
 .contact-message-input{
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding: 18px 20px;
   margin-bottom: 20px;
   border-radius: 10px;
   border: none;
+  outline: none;
 }
+
 
 .contact-message-input{
   height: 200px;

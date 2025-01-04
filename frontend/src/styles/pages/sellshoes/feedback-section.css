@@ -331,6 +331,7 @@ select:focus {
   font-family: 'Poppins', sans-serif;
   width: 100%;
   box-sizing: border-box;
+  outline: none;
 }
 
 .customer-feedback-message {
@@ -345,6 +346,7 @@ select:focus {
   align-self: stretch; 
   overflow-y: auto;
   resize: none;
+  outline: none;
 }
 
 .submit-button-container-div {
