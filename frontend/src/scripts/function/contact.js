@@ -9,7 +9,7 @@ function sendMail() {
   };
 
   // Validate required fields
-  if (!params.from_name || !params.email_id || !phone_number || !address || !params.message) {
+  if (!params.from_name || !params.email_id || !params.phone_number || !params.address || !params.message) {
     alert("Please fill in all required fields: Name, Email, Phone Number, Address, and Message.");
     return;
   }
@@ -32,4 +32,6 @@ function sendMail() {
 }
 
 // Add event listener to the SEND button
-document.getElementById("sendBtn").addEventListener("click", sendMail);
+document.getElementById("contactSendBtn").addEventListener("click", () => {
+  sendMail();
+});
