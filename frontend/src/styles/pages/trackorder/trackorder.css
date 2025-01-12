@@ -1,0 +1,77 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.lock-icon-container {
+  display: flex;
+  gap: 100px;
+}
+
+.header-cart-icon-a:hover .cart-icon-path1,
+.header-cart-icon-a:hover .cart-icon-path2 {
+  fill: blueviolet; /* Hover color for the second path */
+}
+
+.header-cart-icon-a {
+  position: relative;
+}
+
+.cart-quantity {
+  font-size: 15px;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 2px;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: -28px;
+  right: -12px;
+  line-height: 9px;
+  background-color: blueviolet;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-outer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-inner-container { 
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orders-div-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.track-order-header {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.progress-bar-container ul {
+  display: flex;
+  margin-top: 40px;
+}
+
+.progress-bar-container ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 40px;
+}

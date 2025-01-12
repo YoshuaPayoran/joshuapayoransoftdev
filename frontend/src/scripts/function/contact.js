@@ -18,7 +18,7 @@ function sendMail() {
   emailjs
     .send("service_10uylaw", "template_72ay0ab", params)
     .then(function (res) {
-      alert("Message sent successfully! Status: " + res.status);
+      alert("Message sent successfully!");
       // Clear the form
       document.getElementById("contact-name").value = "";
       document.getElementById("contact-email").value = "";
